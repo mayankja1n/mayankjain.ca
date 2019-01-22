@@ -129,7 +129,7 @@
             <h5 class="color-extra-dark-gray font-w-700 font-alt text-uppercase font-alt m-0px m-10px-b">About me</h5>
             <span class="w-50px h-1px theme-bg display-table"></span>
             <p class="w-90 sm-w-100 font-alt font-w-600 color-extra-dark-gray m-25px-t">Hi, I'm Mayank Jain</p>
-            <p class="w-90 sm-w-100 m-25px-b"> I'm a 16 year old highschool student who is passionate about innovating in emmerging technologies. Currently, I've learned about Brain Computer Interfaces and created various projects to solve problems. I'm currently looking into Machine Learning algorithms. I hope to use the knowledge I gain to change the world in the future<br><br>
+            <p class="w-90 sm-w-100 m-25px-b"> I'm a 16 year old highschool student who is passionate about innovating in emmerging technologies. I've learned about Brain Computer Interfaces and created various projects to solve problems. I'm currently looking into Machine Learning algorithms. I hope to use the knowledge I gain to change the world in the future<br><br>
             </p>
 
             <div class="row">
@@ -358,8 +358,9 @@
     </section>
     <!-- / -->
 
-    <!-- Portfolio Start -->
+    <!------------------------------------------------ Portfolio Start -------------------------------------------->
     <section id="portfolio" class="section">
+      
       <div class="container">
         <div class="row justify-content-center m-60px-b md-m-50px-b sm-m-30px-b">
           <div class="col-12 col-md-8 col-lg-6 text-center">
@@ -375,14 +376,17 @@
         <div class="portfolio-filter-02 m-30px-b sm-m-15px-b text-center">
           <ul class="filter display-inline-block black-bg border-radius-30px m-0px">
             <li class="active" data-filter="*">All</li>
-            <li data-filter=".illustration">Illustration</li>
-            <li data-filter=".photoshop">Photoshop</li>
-            <li data-filter=".website">Website</li>
+            <li data-filter=".bci">Brain Computer Interfaces</li>
+            <li data-filter=".vr">Virtual Reality</li>
+            <li data-filter=".ai">Website</li>
           </ul>
         </div> <!-- Portfolio Filter -->
 
         <div class="portfolio-content">
           <ul class="portfolio-cols portfolio-cols-3">
+            
+          	<!-------------------- 						Projects Cards 				------------------------------->
+
             <li class="portfolio-item illustration">
               <div class="portfolio-col portfolio-hover-02">
                 <a href="#">
@@ -430,22 +434,26 @@
                 </div> <!-- Hover -->
               </div> <!-- Portfolio -->
             </li> <!-- col -->
-            <li class="portfolio-item website">
+            
+            <li class="portfolio-item bci">
               <div class="portfolio-col portfolio-hover-02">
-                <a href="#">
-                  <img src="assets/img/767x767.jpg" title="" alt="">
+                <a href="Projects/BraintoSpeech.html">
+                  <img src="assets/img/thumbnails/BraintoSpeech Thumbnail.png" title="" alt="">
                 </a>
-                <div class="overlay dark-bg border-all border-w-10 border-double border-white"></div>
-                <div class="hover text-center p-10px">
+                <a href="Projects/BraintoSpeech.html">
+                  	<div class="overlay dark-bg border-all border-w-10 border-double border-white"></div>
+                	<div class="hover text-center p-10px">
+                </a>
+                
                   <div class="hover-middle">
-                    <p class="font-w-600 text-uppercase font-15 color-white font-alt m-0px letter-spacing-2">Project Title</p>
-                    <label class="color-white">Category</label>
+                    <p class="font-w-600 text-uppercase font-15 color-white font-alt m-0px letter-spacing-2">Brain to Speech Translator</p>
+                    <label class="color-white">Brain Computer Interfaces</label>
                     <div class="btn-bar">
                       <a href="http://www.youtube.com/watch?v=0O2aH4XLbto" class="popup-video theme-color"><i class="fa fa-play"></i></a>
                       <a class="lightbox-gallery theme-color" href="assets/img/767x767.jpg" title="Lightbox gallery image title...">
                         <i class="fas fa-expand"></i>
                       </a>
-                      <a href="#" class="theme-color">
+                      <a href="Projects/BraintoSpeech.html" class="theme-color">
                         <i class="fa fa-link"></i>
                       </a>
                     </div> <!-- Video Btn -->
@@ -453,6 +461,7 @@
                 </div> <!-- Hover -->
               </div> <!-- Portfolio -->
             </li> <!-- col -->
+
             <li class="portfolio-item photoshop">
               <div class="portfolio-col portfolio-hover-02">
                 <a href="#">
@@ -546,6 +555,7 @@
         <div class="row justify-content-center">
           <div class="col-md-9">
               <div id="client-slider-single" class="owl-carousel">
+                
                 <div class="white-bg p-30px sm-p-20px box-shadow-large m-10px text-center">
                     <div class="img w-100px h-100px overflow-hidden display-inline-block border-radius-50">
                       <img src="assets/img/100x100.jpg" alt="guppy" title="guppy" />
