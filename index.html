@@ -229,8 +229,8 @@
             <li class="active" data-filter="*">All</li>
             <li data-filter=".articles">Articles</li>
             <li data-filter=".projects">Projects</li>
-            <li data-filter=".bci">Brain Computer Interfaces</li>
-            <li data-filter=".ai">Artificial Intelligence</li>
+            <li data-filter=".bci">Brain Interfaces</li>
+            <li data-filter=".ai">AI</li>
 
 
           </ul>
@@ -263,7 +263,7 @@
                 	</a>
 					<div class="hover text-center p-10px">
 						<div class="hover-middle">
-							<p class="font-w-600 text-uppercase font-15 color-white font-alt m-0px letter-spacing-2">MalarAI</p>
+							<p class="font-w-600 text-uppercase font-15 color-white font-alt m-0px letter-spacing-2">Malar.AI</p>
 							<label class="color-white">Diagnosing Malaria using a Convolutional Neural Network</label>          
 						</div> <!-- .hover-middle -->
 					</div> <!-- Hover -->
@@ -394,40 +394,33 @@
               <div class="p-11 md-p-30px-lr md-p-40px-tb sm-p-15px-lr sm-p-20px-tb">
                 <p class="font-15 font-alt font-w-600 color-white letter-spacing-1 m-0px m-15px-b">CONTACT ME</p>
                 <p class="m-35px-b w-90 sm-w-100">Feel free to contact me through this form with any questions or comments you may have!</p>
-                <div class="row">
-                  <div class="col-12 col-md-6">
-                    <div class="form-group">
-                      <input name="name" placeholder="Name *" class="dark-form input-medium" type="text">
-                    </div>
-                  </div> <!-- col -->
-
-                  <div class="col-12 col-md-6">
-                    <div class="form-group">
-                      <input name="name" placeholder="Phone" class="dark-form input-medium" type="text">
-                    </div>
-                  </div>
-
-                  <div class="col-12">
-                    <div class="form-group">
-                      <input name="name" placeholder="Subject" class="dark-form input-medium" type="text">
-                    </div>
-                  </div>
-
-                  <div class="col-12">
-                    <div class="form-group">
-                      <textarea name="comment" placeholder="Type your message here ..." rows="6" class="dark-form textarea-medium"></textarea>
-                    </div>
-                  </div>
-
-                  <div class="col-12">
-                    <a href="#" class="m-btn m-btn-m m-btn-w-hover text-uppercase">send message</a>
-                  </div>
-
-                </div> <!-- row -->
-              </div>
-            </div> <!-- col -->
-        </div> <!-- row -->
-      </div> <!-- Container -->
+				
+				<form action="contact-form.php" method="post" id="contact-form" class="row">
+					
+					<div class="col-md-6">
+						<input class="dark-form input-medium" type="text" name="full_name" placeholder="Name *" required>
+					</div>
+					<div class="col-md-6">
+						<input class="dark-form input-medium" type="email" name="email_address" placeholder="Email *" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+					</div>
+					<div class="col-md-12">
+						<input class="dark-form input-medium" type="tel" name="ph_num" placeholder="Phone">
+					</div>
+					<div class="col-md-12">
+						<input class="dark-form input-medium" type="text" name="subject" placeholder="Subject *" required>
+					</div>
+					<div class="col-md-12">
+						<textarea class="dark-form input-medium" name="message" placeholder="Write Your Message... *" required rows="6"></textarea>
+					</div>
+					<div class="col-md-12">
+						<button class="m-btn m-btn-m m-btn-w-hover text-uppercase" type="submit" name="submit">Send Now</button>
+					</div>
+					
+				</form>
+              </div> <!-- row -->
+            </div>
+		</div> <!-- col -->
+      </div> <!-- row -->
     </section>
     <!-- / -->
 

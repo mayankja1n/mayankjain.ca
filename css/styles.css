@@ -6595,3 +6595,7 @@ background-position: center center;
   .sm-section-overlay-h-80 { height: 80%; }
   .sm-section-overlay-h-90 { height: 90%; }  
 }
+
+form input, form textarea{
+	margin-bottom: 20px;
+}
