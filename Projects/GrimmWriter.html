@@ -105,117 +105,163 @@
       <script type="text/javascript" charset="UTF-8" src="js/controls.js"></script>
   </head>
   
-  <body>
+	<body>
 	  
-	  <!-- ==================================================
-							welcome-particles
-      ================================================== -->
-	  <section class="welcome-particles" id="home">
-		  <div id="particles-js">
-          <canvas class="particles-js-canvas-el" style="width: 100%; height: 100%;" width="1898" height="950"></canvas></div>
-          <div class="overlay-bg">
-			  <div class="welcome-text">
-				  <h1 class="mb-20px color-fff fw-700 font-Poppins">Grimm Writer</h1>
+		<!-- ==================================================
+								welcome-particles
+		================================================== -->
+		<section class="welcome-particles" id="home">
+			  <div id="particles-js">
+			  <canvas class="particles-js-canvas-el" style="width: 100%; height: 100%;" width="1898" height="950"></canvas></div>
+			  <div class="overlay-bg">
+				  <div class="welcome-text">
+					  <h1 class="mb-20px color-fff fw-700 font-Poppins">Grimm Writer</h1>
+				  </div>
+			  </div>     
+		  </section>
+		<!-- ==================================================
+								End welcome-area
+		================================================== -->
+
+		<section class="sec-padding text-center" style="background-color: white;">
+			  <div class="container">
+				  <h1 class="title-h">Writing <span>Fables</span> using <span>Artificial Intelligence</span></h1>
+
+				  <br>
+
+				  <p class="title-p">Grimm Writer is a deep neural network that uses LSTM (Long Short Term <Memory></Memory>) layers to give it the power to generate stories based on the writing style of fables written by the Grimm Brothers.</p>
+
+				  <div class="row">
+					<!--iframe width="800" height="450" src="img/video-coming-soon.jpg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe-->	
+					<img src="img/video-coming-soon.jpg">
+				  </div>
+
+				  <br><br><br>
+
+				  <h1 class="title-h">How it Works</h1>
+				  &nbsp;
+
+				  <div class="row">
+					  <div class="col-md-4">
+						  <div class="mb-25px mt-25px wow fadeInUp" data-wow-delay="0.3s" style="visibility: hidden; animation-delay: 0.3s; animation-name: none;">
+							  <img src="img/Icons/Data Icon.png" class="hiw-icons">
+							  <h4>Dataset Acquisition</h4>
+							  <p style="text-align: left;">I wanted to create stories based on the Grimm Brothers' writing as they wrote a significant number of Disney's stories. I found a copy of one of their story books online.</p>
+						  </div>
+					  </div>
+					  <div class="col-md-4">
+						  <div class="mb-25px mt-25px wow fadeInUp" data-wow-delay="0.5s" style="visibility: hidden; animation-delay: 0.5s; animation-name: none;">
+							  <img src="img/Icons/Data Processing Icon.png" class="hiw-icons">
+							  <h4>Data Processing</h4>
+							  <p style="text-align: left;">The text file full of the story was stripped of non-story material. Then the story was split by words to create a vocabulary for the AI. Any rarely occuring words were removed to speed up training.</p>
+						  </div>
+					  </div>
+					  <div class="col-md-4">
+						  <div class="mb-25px mt-25px wow fadeInUp" data-wow-delay="0.7s" style="visibility: hidden; animation-delay: 0.7s; animation-name: none;">
+							  <img src="img/Icons/Data Split Icon.png" class="hiw-icons">
+							  <h4>Training Data Creation</h4>
+							  <p style="text-align: left;">To train the AI, it was fed a series of words, and trained to detect the next word in that series. The data was one-hot-encoded so that the AI could predict a probability of each word appearing next.</p>
+						  </div>
+					  </div>
+				  </div>
+				  <div class="row">
+					  <div class="col-md-2"></div>
+					  <div class="col-md-4 offset-md-2">
+						  <div class="mb-25px mt-25px wow fadeInUp" data-wow-delay="0.3s" style="visibility: hidden; animation-delay: 0.3s; animation-name: none;">
+							  <img src="img/Icons/Neural Network Icon.png" class="hiw-icons">
+							  <h4>Neural Network Architecture</h4>
+							  <p style="text-align: left;">The neural network uses a bi-directional LSTM. This means that it will use what comes before and after a word to give it more context for a prediction.</p>
+						  </div>
+					  </div>
+					  <div class="col-md-4">
+						  <div class="mb-25px mt-25px wow fadeInUp" data-wow-delay="0.5s" style="visibility: hidden; animation-delay: 0.5s; animation-name: none;">
+							  <img src="img/Icons/Brain Network Icon.png" class="hiw-icons">
+							  <h4>Network Training</h4>
+							  <p style="text-align: left;">The network was trained for 200 epochs. Overtime the model gradually improved its ability to create sentences.</p>
+						  </div>
+					  </div>
+				  </div>
+
 			  </div>
-          </div>     
-      </section>
-	  <!-- ==================================================
-							End welcome-area
-      ================================================== -->
-	  
-	  <section class="sec-padding text-center" style="background-color: white;">
-		  <div class="container">
-			  <h1 class="title-h">Writing <span>Fables</span> using <span>Artificial Intelligence</span></h1>
-			  
-			  <br>
+		  </section>
 
-			  <p class="title-p">Grimm Writer is a deep neural network that uses LSTM (Long Short Term <Memory></Memory>) layers to give it the power to generate stories based on the writing style of fables written by the Grimm Brothers.</p>
+		<section class="container">
+			
+			<h1 class="title-h">Here's a Story written by Grimm Writer!:</h1>
+			
+			<br><br>
+			
+			<p style="font-size: 16pt; line-height: 24pt;">
+					In old times, when wishing was having, there lived a king whose daughters were all beautiful, but the youngest was so beautiful that they did not one of which the time was out of the time , but it was more with them to go on the forest by the forest. And one must be up in the old woman and could one with the old woman. <br><br>
 
-			  <div class="row">
-			  	<!--iframe width="800" height="450" src="img/video-coming-soon.jpg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe-->	
-				<img src="img/video-coming-soon.jpg">
-			  </div>
+					He took her in his great mother of him, and the mother took her with his; and when the king was a golden this time to him his beautiful from the maiden. his wife was more with a great golden asked, but “you with a” asked he which you had more has a beautiful get home. <br><br>
 
-			  <br><br><br>
+					As then as one from the golden more. then they thought, we “shall be more from asked, now “shall I are the evening, when we are do up, give you the maiden to the golden other again, and take a other. <br><br>
 
-			  <h1 class="title-h">How it Works</h1>
-			  &nbsp;
+					We shall have been a golden house. I will get no more must be away. the mother has golden. <br><br>
 
-			  <div class="row">
-				  <div class="col-md-4">
-					  <div class="mb-25px mt-25px wow fadeInUp" data-wow-delay="0.3s" style="visibility: hidden; animation-delay: 0.3s; animation-name: none;">
-						  <img src="img/Icons/Data Icon.png" class="hiw-icons">
-						  <h4>Dataset Acquisition</h4>
-						  <p style="text-align: left;">I wanted to create stories based on the Grimm Brothers' writing as they wrote a significant number of Disney's stories. I found a copy of one of their story books online.</p>
-					  </div>
-				  </div>
-				  <div class="col-md-4">
-					  <div class="mb-25px mt-25px wow fadeInUp" data-wow-delay="0.5s" style="visibility: hidden; animation-delay: 0.5s; animation-name: none;">
-						  <img src="img/Icons/Data Processing Icon.png" class="hiw-icons">
-						  <h4>Data Processing</h4>
-						  <p style="text-align: left;">The text file full of the story was stripped of non-story material. Then the story was split by words to create a vocabulary for the AI. Any rarely occuring words were removed to speed up training.</p>
-					  </div>
-				  </div>
-				  <div class="col-md-4">
-					  <div class="mb-25px mt-25px wow fadeInUp" data-wow-delay="0.7s" style="visibility: hidden; animation-delay: 0.7s; animation-name: none;">
-						  <img src="img/Icons/Data Split Icon.png" class="hiw-icons">
-						  <h4>Training Data Creation</h4>
-						  <p style="text-align: left;">To train the AI, it was fed a series of words, and trained to detect the next word in that series. The data was one-hot-encoded so that the AI could predict a probability of each word appearing next.</p>
-					  </div>
-				  </div>
-			  </div>
-			  <div class="row">
-				  <div class="col-md-2"></div>
-				  <div class="col-md-4 offset-md-2">
-					  <div class="mb-25px mt-25px wow fadeInUp" data-wow-delay="0.3s" style="visibility: hidden; animation-delay: 0.3s; animation-name: none;">
-						  <img src="img/Icons/Neural Network Icon.png" class="hiw-icons">
-						  <h4>Neural Network Structuring</h4>
-						  <p style="text-align: left;">The neural network uses a bi-directional LSTM. This means that it will use what comes before and after a word to give it more context for a prediction.</p>
-					  </div>
-				  </div>
-				  <div class="col-md-4">
-					  <div class="mb-25px mt-25px wow fadeInUp" data-wow-delay="0.5s" style="visibility: hidden; animation-delay: 0.5s; animation-name: none;">
-						  <img src="img/Icons/Brain Network Icon.png" class="hiw-icons">
-						  <h4>Network Training</h4>
-						  <p style="text-align: left;">The network was trained for 200 epochs. Overtime the model gradually improved its ability to create sentences.</p>
-					  </div>
-				  </div>
-			  </div>
-			  
-		  </div>
-	  </section>
+					If I did not come. I am great home, but they were all; and down home. <br><br>
 
-	  <!-- ========================================================================================== -->
-	  <section class="sec-padding text-center" style="background-color: white;">
-	  	<div class="container">
-	  		<!--h1 class="title-h">Read About my Project on <span><a href="https://medium.com/@mayankj2112/playing-games-with-your-mind-brain-controlled-snake-54a65dca1391" style="color: cyan;">Medium</a></span></h1-->
-	  	</div>
-	  </section>
-	  <!-- ========================================================================================== -->
+					When the king’s daughter was great man asked, he “will you however! <br><br>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="js/jquery-3.js"></script>
-    <script src="js/jquery-migrate-3.js"></script>
-    <script src="js/popper.js"></script>
-    <script src="js/bootstrap.js"></script>
-    <!-- particles.js-->
-    <script src="js/particles.js"></script>
-	<script src="js/app.js"></script>
-	<script src="js/jquery_002.js"></script>
-	<script src="js/jquery.js"></script>
-	<script src="js/lightbox.js"></script>
-    <script src="js/lity.js"></script>
-	<script src="js/scrollIt.js"></script>
-	<script src="js/owl.js"></script>
-	<script src="js/swiper.js"></script>
-	<script src="js/validator.js"></script>
-	<script src="js/isotope.js"></script>
-	<script src="js/js"></script>
-  	<script src="js/map-white.js"></script>
-	<script src="js/main.js"></script>
-	<script src="js/wow.js"></script>
-	<script>new WOW().init();</script>
+				  	Do we for me: Do it with you, however, who has good has here! here has me! <br><br>
 
-</body>
+				  	Me have I must be back again, golden has no give me get shall of this more, but this has a wife, and has great wife where from the away with which. they has thought, there, let me let me have I give” <br><br>
+
+				  	We will be back and well, and he do up! <br><br>
+
+				  	You have them! but at last is time down with the! we then more” <br><br>
+
+				  	The king asked the back, who “do you to be! but the wife <br><br>
+
+				  	Not give her it more has come back, and has golden one would take her with great now she great the golden woman, however, could take get a beautiful. but then one more from her by the forest, and queen, there is evening the golden house. <br><br>
+
+				  	However, she was no one of the other, he and thought to last, this “shall I get away, and has come back to my come, away. <br><br>
+
+				  	You will come to well, other must be; and we must take them home then you. If I will do you back we must be! asked him came with you. <br><br>
+	
+				  	But you have come back, and has golden other on be with a great house, and the maiden daughter to the mother we down, the golden son then we.
+			</p>
+			
+			<div style="text-align: center; width: 100%;">
+				<h2>Microsoft Word Asssement:</h2>
+				<h4>Spelling Errors: 0</h4>
+				<h4>Grammar Errors: 6</h4>
+			</div>
+			
+		</section>
+
+		<!-- ========================================================================================== -->
+		<section class="sec-padding text-center" style="background-color: white;">
+			<div class="container">
+				<!--h1 class="title-h">Read About my Project on <span><a href="https://medium.com/@mayankj2112/playing-games-with-your-mind-brain-controlled-snake-54a65dca1391" style="color: cyan;">Medium</a></span></h1-->
+			</div>
+		  </section>
+		<!-- ========================================================================================== -->
+
+		<!-- Optional JavaScript -->
+		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+		<script src="js/jquery-3.js"></script>
+		<script src="js/jquery-migrate-3.js"></script>
+		<script src="js/popper.js"></script>
+		<script src="js/bootstrap.js"></script>
+		<!-- particles.js-->
+		<script src="js/particles.js"></script>
+		<script src="js/app.js"></script>
+		<script src="js/jquery_002.js"></script>
+		<script src="js/jquery.js"></script>
+		<script src="js/lightbox.js"></script>
+		<script src="js/lity.js"></script>
+		<script src="js/scrollIt.js"></script>
+		<script src="js/owl.js"></script>
+		<script src="js/swiper.js"></script>
+		<script src="js/validator.js"></script>
+		<script src="js/isotope.js"></script>
+		<script src="js/js"></script>
+		<script src="js/map-white.js"></script>
+		<script src="js/main.js"></script>
+		<script src="js/wow.js"></script>
+		<script>new WOW().init();</script>
+
+	</body>
 </html>
