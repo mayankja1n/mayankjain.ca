@@ -25,7 +25,7 @@
 	</style>
 	<style type="text/css">
 		body{
-			background: url('img/Letter Matrix.jpg');
+			background: url('img/AI Writer.jpg');
 			background-repeat: no-repeat;
 			background-size: 100%;
 		}
@@ -70,7 +70,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	
-	<title>Brain Controlled Snake</title>
+	<title>Grimm Writer</title>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.css">
@@ -115,7 +115,7 @@
           <canvas class="particles-js-canvas-el" style="width: 100%; height: 100%;" width="1898" height="950"></canvas></div>
           <div class="overlay-bg">
 			  <div class="welcome-text">
-				  <h1 class="mb-20px color-fff fw-700 font-Poppins">Brain to Speech Translator</h1>
+				  <h1 class="mb-20px color-fff fw-700 font-Poppins">Grimm Writer</h1>
 			  </div>
           </div>     
       </section>
@@ -125,14 +125,15 @@
 	  
 	  <section class="sec-padding text-center" style="background-color: white;">
 		  <div class="container">
-			  <h1 class="title-h">Convert your <span>Brainwaves</span> to <span>Speech</span></h1>
+			  <h1 class="title-h">Writing <span>Fables</span> using <span>Artificial Intelligence</span></h1>
 			  
 			  <br>
 
-			  <p class="title-p">This project is step towards helping people with neurological disabilities communicate and interact with technology independantly. The program allows you to control a keyboard and speak what have typed, out loud, on command</p>
+			  <p class="title-p">Grimm Writer is a deep neural network that uses LSTM (Long Short Term <Memory></Memory>) layers to give it the power to generate stories based on the writing style of fables written by the Grimm Brothers.</p>
 
 			  <div class="row">
-			  	<iframe width="560" height="315" src="https://www.youtube.com/embed/ME-kXmKTxKo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>	  	
+			  	<!--iframe width="800" height="450" src="img/video-coming-soon.jpg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe-->	
+				<img src="img/video-coming-soon.jpg">
 			  </div>
 
 			  <br><br><br>
@@ -142,34 +143,52 @@
 
 			  <div class="row">
 				  <div class="col-md-4">
-					  <div class="mb-25px mt-25px wow fadeInUp" data-wow-delay="0.3s" style="visibility: hijsen; animation-delay: 0.3s; animation-name: none;">
-						  <img src="img/Icons/Muse Icon.png" class="hiw-icons">
-						  <h4>EEG Extraction</h4>
-						  <p style="text-align: left;">EEG data from the player is extracted using the Muse headband. The data is sent over a web socket to be recieved by the game</p>
+					  <div class="mb-25px mt-25px wow fadeInUp" data-wow-delay="0.3s" style="visibility: hidden; animation-delay: 0.3s; animation-name: none;">
+						  <img src="img/Icons/Data Icon.png" class="hiw-icons">
+						  <h4>Dataset Acquisition</h4>
+						  <p style="text-align: left;">I wanted to create stories based on the Grimm Brothers' writing as they wrote a significant number of Disney's stories. I found a copy of one of their story books online.</p>
 					  </div>
 				  </div>
 				  <div class="col-md-4">
 					  <div class="mb-25px mt-25px wow fadeInUp" data-wow-delay="0.5s" style="visibility: hidden; animation-delay: 0.5s; animation-name: none;">
-						  <img src="img/Icons/Keyboard Icon.png" class="hiw-icons">
-						  <h4>Brain to Text</h4>
-						  <p style="text-align: left;">The game iterates through each row so the user can choose the right one. Then it iterates through the row so the user can choose the letter to type, then adding the letter to the phrase</p>
+						  <img src="img/Icons/Data Processing Icon.png" class="hiw-icons">
+						  <h4>Data Processing</h4>
+						  <p style="text-align: left;">The text file full of the story was stripped of non-story material. Then the story was split by words to create a vocabulary for the AI. Any rarely occuring words were removed to speed up training.</p>
 					  </div>
 				  </div>
 				  <div class="col-md-4">
 					  <div class="mb-25px mt-25px wow fadeInUp" data-wow-delay="0.7s" style="visibility: hidden; animation-delay: 0.7s; animation-name: none;">
-						  <img src="img/Icons/Text to Speech Icon.png" class="hiw-icons">
-						  <h4>Text to Speech</h4>
-						  <p style="text-align: left;">When the user has typed out the phrase they want to speak, they can now have the program say the text out loud whenever their brainwaves indicate they want to</p>
+						  <img src="img/Icons/Data Split Icon.png" class="hiw-icons">
+						  <h4>Training Data Creation</h4>
+						  <p style="text-align: left;">To train the AI, it was fed a series of words, and trained to detect the next word in that series. The data was one-hot-encoded so that the AI could predict a probability of each word appearing next.</p>
 					  </div>
 				  </div>
 			  </div>
+			  <div class="row">
+				  <div class="col-md-2"></div>
+				  <div class="col-md-4 offset-md-2">
+					  <div class="mb-25px mt-25px wow fadeInUp" data-wow-delay="0.3s" style="visibility: hidden; animation-delay: 0.3s; animation-name: none;">
+						  <img src="img/Icons/Neural Network Icon.png" class="hiw-icons">
+						  <h4>Neural Network Structuring</h4>
+						  <p style="text-align: left;">The neural network uses a bi-directional LSTM. This means that it will use what comes before and after a word to give it more context for a prediction.</p>
+					  </div>
+				  </div>
+				  <div class="col-md-4">
+					  <div class="mb-25px mt-25px wow fadeInUp" data-wow-delay="0.5s" style="visibility: hidden; animation-delay: 0.5s; animation-name: none;">
+						  <img src="img/Icons/Brain Network Icon.png" class="hiw-icons">
+						  <h4>Network Training</h4>
+						  <p style="text-align: left;">The network was trained for 200 epochs. Overtime the model gradually improved its ability to create sentences.</p>
+					  </div>
+				  </div>
+			  </div>
+			  
 		  </div>
 	  </section>
 
 	  <!-- ========================================================================================== -->
 	  <section class="sec-padding text-center" style="background-color: white;">
 	  	<div class="container">
-	  		<h1 class="title-h">Read About my Project on <span><a href="https://medium.com/@mayankj2112/playing-games-with-your-mind-brain-controlled-snake-54a65dca1391" style="color: cyan;">Medium</a></span></h1>
+	  		<!--h1 class="title-h">Read About my Project on <span><a href="https://medium.com/@mayankj2112/playing-games-with-your-mind-brain-controlled-snake-54a65dca1391" style="color: cyan;">Medium</a></span></h1-->
 	  	</div>
 	  </section>
 	  <!-- ========================================================================================== -->
