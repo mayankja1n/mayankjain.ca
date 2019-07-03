@@ -6599,3 +6599,28 @@ background-position: center center;
 form input, form textarea{
 	margin-bottom: 20px;
 }
+
+#logo-row-1, #logo-row-2{
+	width: 100%;
+}
+
+#logo-row-1 img, #logo-row-2 img{
+	max-width: 100%;
+	height: auto;
+	filter: grayscale(100%);
+	padding: 5%;
+	padding-top: 7.5%;
+}
+
+#logo-row-1 img:hover, #logo-row-2 img:hover{
+	filter: grayscale(0%);
+
+}
+
+@media (max-width: 767px){
+	}
+}
+
+body{
+	overflow-x: hidden;
+}
