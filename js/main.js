@@ -1,240 +1,383 @@
-$(function () {
-    
-    "use strict";
-	 /* smooth scroll
-  -------------------------------------------------------*/
-	  $.scrollIt({
+/* -----------------------------------------------
+					Js Main
+--------------------------------------------------
 
-		easing: 'swing',      // the easing function for animation
-		scrollTime: 900,       // how long (in ms) the animation takes
-		activeClass: 'active', // class given to the active nav element
-		onPageChange: null,    // function(pageIndex) that is called when page is changed
-		topOffset: -70,
-		upKey: 38,                // key code to navigate to the next section
-        downKey: 40          // key code to navigate to the previous section
+    Template Name: Baha - Personal Portfolio Template
+    Author: Malyarchuk
+    Copyright: 2019
 
-	  });
-	
-	 var win = $(window);
-           
-  
-    win.on("scroll", function () {
-      var wScrollTop  = $(window).scrollTop();    
-        
-        if (wScrollTop > 150) {
-            $(".navbar").addClass("navbar-colored");
-        } else {
-            $(".navbar").removeClass("navbar-colored");
-        }
-    });
-	
-	// close navbar-collapse when a  clicked
-    $(".navbar-nav a").on('click', function () {
-        $(".navbar-collapse").removeClass("show");
-    });
-	
-	/* navbar-2 */
-	   
-    $('.navbar-2 .bars').click(function () {
-        $(this).toggleClass('bars-rotate'); 
-        $('.navbar-2 .overlay-bg').toggleClass('overlay-bg-open');
-    });
-	
-	 /* scroll-top-btn */
-	var  scrollButton = $('.scroll-top-btn .fa');
-    win.on('scroll', function () {
-        if ($(this).scrollTop() >= 700) {  
-            scrollButton.show();
-        } else {
-            scrollButton.hide();
-        }
-    });
-    /* Click On scroll-top-btn */ 
-    scrollButton.on('click', function () {
-        $('html,body').animate({ scrollTop : 0 }, 1200);
-    });
+--------------------------------------------------
 
-	/* counter */
-	$('.count').counterUp({
-        delay: 20,
-        time: 1500
-    });
-     
-	// faqs section
-    $('.faqs .text-box .box h6').on("click", function(){
-		$(this).toggleClass('white blue').siblings().removeClass('blue').addClass('black');
-        $(this).next().slideToggle(500);
-        $(".faqs .text-box .box p").not($(this).next()).slideUp(500); 
-    });
- 
-	
-	$('.carousel').carousel(); 
-	
-	/* welcome-slider slider */
-	$('.welcome-slider .owl-carousel').owlCarousel({
-        items: 1,
-        loop: true,
-        margin: 0,
-        autoplay: false,
-        autoplayTimeout: 2800,
-        autoplayHoverPause: true,
-        smartSpeed: 650,
-		mouseDrag: false,
-		animateIn : 'fadeInDown'
-    });
-	
-	/* welcome-slider slider */
-	$('.welcome-slider-2 .owl-carousel').owlCarousel({
-        items: 1,
-        loop: true,
-        margin: 0,
-        autoplay: false,
-        autoplayTimeout: 2800,
-        autoplayHoverPause: true,
-        smartSpeed: 650,
-		nav:true,
-            navText: [
-                '<i class="fa fa-angle-left"></i>',
-                '<i class="fa fa-angle-right"></i>'
-            ]
-    });
-	
-	/* work-area-3 slider */
-	$('.work-area-3 .owl-carousel').owlCarousel({
-        items: 3,
-        loop: true,
-        margin: 0,
-        autoplay: false,
-        autoplayTimeout: 2000,
-        autoplayHoverPause: true,
-        smartSpeed: 650,
-		dots: true,
-		responsiveClass:true,
-        responsive : {
-            992 : {
-                items: 3
-            },
-    
-            576 : {
-                items: 2
-            },
-            
-            0 : {
-                items: 1
-            }
-        }
-    });
-	
-	/* testimonials slider */
-	$('.testimonials .owl-carousel').owlCarousel({
-        items: 1,
-        loop: true,
-        margin: 0,
-        autoplay: true,
-        autoplayTimeout: 2800,
-        autoplayHoverPause: true,
-        smartSpeed: 650,
-		mouseDrag: true
-    });
-	
-	/* blog-area-2 slider */
-	$('.blog-area-2 .owl-carousel').owlCarousel({
-        items: 1,
-        loop: true,
-        margin: 50,
-        autoplay: true,
-        autoplayTimeout: 2800,
-        autoplayHoverPause: true,
-        smartSpeed: 650
-    });
-	
-	 var swiperVertical = new Swiper('.swiper-vertical.swiper-container', {
-        pagination: '.swiper-pagination',
-        paginationClickable: true,
-		slidesPerView: 1,
-        direction: 'vertical',
-		keyboardControl: true,
-        spaceBetween: 0,
-        mousewheelControl: true,
-		allowTouchMove: true
-    });
-		 	
-	/*  skills-area section  */
-    win.on('scroll', function () {
-        $(".skills-progress span").each(function () {
-            var bottom_of_object = 
-            $(this).offset().top + $(this).outerHeight();
-            var bottom_of_window = 
-            $(window).scrollTop() + $(window).height();
-            var myVal = $(this).attr('data-value');
-            if(bottom_of_window > bottom_of_object) {
-                $(this).css({
-                  width : myVal
-                });
-            }
-        });
-    });
-	
-	/* contact-area section */
-    $('#contact-form').validator();
+Table of Content
 
-    $('#contact-form').on('submit', function (e) {
-        if (!e.isDefaultPrevented()) {
-            var url = "contact.php";
+	1. Preloader
+	2. Sound Start
+	3. Isotope Portfolio Setup
+	4. Blogs Masonry Setup
+	5. Active Current Link
+	6. Mobile Toggle Click Setup
+	7. Testimonials OwlCarousel
+	8. Chart Setup
+	9. Portfolio Tilt Setup
+	10. Portfolio Image Link
+	11. Portfolio Video Link
+	12. Blog Video Link
+	13. Validate Contact Form
+	14. Google Map
+	15. Particles JS
 
-            $.ajax({
-                type: "POST",
-                url: url,
-                data: $(this).serialize(),
-                success: function (data)
-                {
-                    var messageAlert = 'alert-' + data.type;
-                    var messageText = data.message;
+----------------------------------- */
 
-                    var alertBox = '<div class="alert ' + messageAlert + ' alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>' + messageText + '</div>';
-                    if (messageAlert && messageText) {
-                        $('#contact-form').find('.messages').html(alertBox);
-                        $('#contact-form')[0].reset();
-                    }
-                }
+$(window).on('load', function() {
+		
+	/* -----------------------------------
+				1. Preloader
+	----------------------------------- */
+	$("#preloader").delay(1000).addClass('loaded');
+	
+	/* -----------------------------------
+			  2. Sound Setup
+	----------------------------------- */
+	$('body').append('<audio loop autoplay volume="0" id="audio-player"><source src="music.mp3" type="audio/mpeg"></audio>');
+    	var audio = document.getElementById("audio-player");
+    	audio.volume = 0.2;
+	
+	if($(window).length) {
+		$('.music-bg').css({'visibility':'visible'});
+		$('body').addClass("audio-on");
+		if ($('body').hasClass('audio-off')) {
+        	$('body').removeClass('audio-on');
+		} 
+		$(".music-bg").on('click', function() {
+			$('body').toggleClass("audio-on audio-off");         
+			if ($('body').hasClass('audio-off')) {
+				audio.pause();
+			} 
+			if ($('body').hasClass('audio-on')) {
+				audio.play();
+			}
+		});
+	}
+	
+	/* -----------------------------------
+			3. Isotope Portfolio Setup
+	----------------------------------- */
+    if( $('.portfolio-items').length ) {
+        var $elements = $(".portfolio-items"),
+            $filters = $('.portfolio-filter ul li');
+        $elements.isotope();
+
+        $filters.on('click', function(){
+            $filters.removeClass('active');
+            $(this).addClass('active');
+            var selector = $(this).data('filter');
+            $(".portfolio-items").isotope({
+                filter: selector,
+                hiddenStyle: {
+                    transform: 'scale(.2) skew(30deg)',
+                    opacity: 0
+                },
+                visibleStyle: {
+                    transform: 'scale(1) skew(0deg)',
+                    opacity: 1,
+                },
+                transitionDuration: '.5s'
             });
-            return false;
+        });
+    }
+	
+	/* -----------------------------------
+			4. Blogs Masonry Setup
+	----------------------------------- */
+    $('.blog-masonry').isotope({ layoutMode: 'moduloColumns' });
+	
+});
+
+$(document).ready(function() {
+    "use strict";
+	
+	/* -----------------------------------
+			5. Active Current Link
+	----------------------------------- */
+    $('.header-main ul li a').on('click',function() {
+        if($('.header-main.on').length) {
+            $('.header-main').removeClass('on');
         }
     });
 	
-	 
-});
-
-
-
-$(window).on("load",function (){
+	/* -----------------------------------
+		6. Mobile Toggle Click Setup
+	----------------------------------- */
+    $('.header-toggle').on('click', function() {
+        $('.header-main').toggleClass('on');
+    });
 	
-     $('.load-wrapp').fadeOut(100);
-       
-   /* isotope */
-    $('.grid').isotope({
-      // options
-      itemSelector: '.items'
+	/* -----------------------------------
+	      7. Testimonials OwlCarousel
+	----------------------------------- */
+	$(".testimonial .owl-carousel").owlCarousel({
+        loop: true,
+        margin: 30,
+        autoplay: true,
+        smartSpeed: 500,
+        responsiveClass: true,
+        dots: false,
+        autoplayHoverPause: true,
+        responsive: {
+            0: {
+                items: 1,
+            },
+            800: {
+                items: 1,
+            },
+            1000: {
+                items: 2,
+            },
+        },
     });
-
-    var $grid = $('.grid').isotope({
-      // options
+	
+	/* -----------------------------------
+	      	8. Chart Setup
+	----------------------------------- */
+	if ($('.chart').length > 0) {
+	    $('.chart').easyPieChart({
+          trackColor:'#0e0f10',
+	      scaleColor:false,
+	      easing: 'easeOutBounce',
+	      scaleLength: 4,
+	      lineCap: 'square',
+	      lineWidth:5,
+	      size:130,
+	      animate: {
+	                duration: 2500,
+	                enabled: true
+	    	}
+	 	});
+	 }
+	
+	/* -----------------------------------
+	      	9. Portfolio Tilt Setup
+	----------------------------------- */
+    $('.pt-portfolio .portfolio-items .item figure').tilt({
+        maxTilt: 3,
+        glare: true,
+        maxGlare: .6,
+        reverse: true
     });
+	
+	/* -----------------------------------
+	      10. Portfolio Image Link
+	----------------------------------- */
+	$(".portfolio-items .image-link").magnificPopup({
+		type: "image"
+	});
+	
+	/* -----------------------------------
+	      11. Portfolio Video Link
+	----------------------------------- */
+	$(".portfolio-items .video-link").magnificPopup({
+		type: "iframe"
+	});
+	
+	/* -----------------------------------
+	      12. Blog Video Link
+	----------------------------------- */
+	$(".pt-blog .blog-item .thumbnail .btn-play").magnificPopup({
+		type: "iframe"
+	});
+	
+	/* -----------------------------------
+	    13. Validate Contact Form
+	----------------------------------- */
+	if ($("#contact-form").length) {
+        $("#contact-form").validate({
+            rules: {
+                name: {
+                    required: true,
+                    minlength: 2
+                },
 
-    // filter items on button click
-    $('.filtering').on( 'click', 'span', function() {
+                email: "required",
+				
+            },
 
-        var filterValue = $(this).attr('data-filter');
+            messages: {
+                name: "Please enter your name",
+                email: "Please enter your email address"
+            },
 
-        $grid.isotope({ filter: filterValue });
+            submitHandler: function (form) {
+                $.ajax({
+                    type: "POST",
+                    url: "mail.php",
+                    data: $(form).serialize(),
+                    success: function () {
+                        $( "#loader").hide();
+                        $( "#success").slideDown( "slow" );
+                        setTimeout(function() {
+                        $( "#success").slideUp( "slow" );
+                        }, 3000);
+                        form.reset();
+                    },
+                    error: function() {
+                        $( "#loader").hide();
+                        $( "#error").slideDown( "slow" );
+                        setTimeout(function() {
+                        $( "#error").slideUp( "slow" );
+                        }, 3000);
+                    }
+                });
+                return false;
+            }
 
-    });
+        });
+    }
+	
+	/* Google Map Setup */
+    if($('#map').length) {
+        initMap();
+     };
 
-    $('.filtering').on( 'click', 'span', function() {
-
-        $(this).addClass('active').siblings().removeClass('active');
-
-    });
-
-	 
 });
+
+/* -----------------------------------
+  		14. Google Map
+----------------------------------- */
+function initMap() {
+    var latitude = $("#map").data('latitude'),
+        longitude = $("#map").data('longitude'),
+        zoom = $("#map").data('zoom'),
+        cordinates = new google.maps.LatLng(latitude, longitude);
+
+    var styles = [{"stylers":[{"saturation":-100},{"gamma":0.8},{"lightness":4},{"visibility":"on"}]},{"featureType":"landscape.natural","stylers":[{"visibility":"on"},{"color":"#5dff00"},{"gamma":4.97},{"lightness":-5},{"saturation":100}]}];
+	
+        var mapOptions = {
+        zoom: zoom,
+        center: cordinates,
+        mapTypeControl: false,
+        disableDefaultUI: true,
+        zoomControl: true,
+        scrollwheel: false,
+        styles: styles
+    };
+    var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+    var marker = new google.maps.Marker({
+        position: cordinates,
+        map: map,
+        title: "We are here!"
+    });
+}
+
+/* -----------------------------------
+  		15. Particles JS
+----------------------------------- */
+particlesJS.load('particles-js', {
+  "particles": {
+    "number": {
+      "value": 50,
+      "density": {
+        "enable": true,
+        "value_area": 800
+      }
+    },
+    "color": {
+      "value": "#ffffff"
+    },
+    "shape": {
+      "type": "circle",
+      "stroke": {
+        "width": 0,
+        "color": "#000000"
+      },
+      "polygon": {
+        "nb_sides": 5
+      },
+      "image": {
+        "src": "img/github.svg",
+        "width": 100,
+        "height": 100
+      }
+    },
+    "opacity": {
+      "value": 0.5,
+      "random": false,
+      "anim": {
+        "enable": false,
+        "speed": 1,
+        "opacity_min": 0.1,
+        "sync": false
+      }
+    },
+    "size": {
+      "value": 3,
+      "random": true,
+      "anim": {
+        "enable": false,
+        "speed": 40,
+        "size_min": 0.1,
+        "sync": false
+      }
+    },
+    "line_linked": {
+      "enable": true,
+      "distance": 150,
+      "color": "#ffffff",
+      "opacity": 0.4,
+      "width": 1
+    },
+    "move": {
+      "enable": true,
+      "speed": 6,
+      "direction": "none",
+      "random": false,
+      "straight": false,
+      "out_mode": "out",
+      "bounce": false,
+      "attract": {
+        "enable": false,
+        "rotateX": 600,
+        "rotateY": 1000
+      }
+    }
+  },
+  "interactivity": {
+    "detect_on": "canvas",
+    "events": {
+      "onhover": {
+        "enable": true,
+        "mode": "repulse"
+      },
+      "onclick": {
+        "enable": true,
+        "mode": "push"
+      },
+      "resize": true
+    },
+    "modes": {
+      "grab": {
+        "distance": 400,
+        "line_linked": {
+          "opacity": 1
+        }
+      },
+      "bubble": {
+        "distance": 400,
+        "size": 40,
+        "duration": 2,
+        "opacity": 8,
+        "speed": 3
+      },
+      "repulse": {
+        "distance": 100,
+        "duration": 0.4
+      },
+      "push": {
+        "particles_nb": 4
+      },
+      "remove": {
+        "particles_nb": 2
+      }
+    }
+  },
+  "retina_detect": true
+});	
