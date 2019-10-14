@@ -1810,6 +1810,10 @@ blockquote:before,
 			transform: translateX(0%);
 }
 
+.pt-caption {
+	font-weight: 300;
+}
+
 /* ---------------------------------
 		8. Blog Section
 --------------------------------- */
@@ -2187,6 +2191,58 @@ blockquote:before,
 	margin-top: 2.5px;
 	text-align: center;
 	color: lightgray
+}
+
+/* Tags */
+.blog-page .tags {
+	margin-bottom: 50px;
+}
+
+.blog-page .tags ul li {
+    display: inline-block;
+}
+
+.blog-page .tags ul {
+	padding-top: 15px;
+}
+
+.blog-page .tags ul li a {
+	position: relative;
+	display: inline-block;
+	line-height: 24px;
+	padding: 8px 19px;
+	margin: 0px 5px 10px 0px;
+	color: #fff;
+	text-align: center;
+	background-color: #070708;
+	border: 1px solid #070708;
+}
+
+.blog-page .tags ul li a:hover {
+	background-color: #070708 !important;
+}
+
+.blog-page .tags ul li a:after {
+	border-top: 15px solid #0e0f10;
+}
+
+.blog-page .tags ul li a:before {
+	border-bottom: 15px solid #0e0f10;
+}
+
+.tags h4 {
+	position: relative;
+	margin-bottom: 20px;
+}
+
+.tags h4:after {
+	content: '';
+	position: absolute;
+	width: 40px;
+	height: 3px;
+	left: 0;
+	bottom: -15px;
+	background-color: #fff;
 }
 
 .text-break {

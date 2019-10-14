@@ -52,7 +52,8 @@ a:focus,
 .page .header-box h3:after,
 .blog-page .header-box h3:after,
 .blog-list .side-left h4:after,
-.blog-list .side-left .tags ul li a {
+.blog-list .side-left .tags ul li a, 
+.blog-page .tags ul li a{
 	background-color: #25ca7f !important;
 }
 

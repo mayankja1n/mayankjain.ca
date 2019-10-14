@@ -13,7 +13,8 @@ blockquote,
 			border-radius: 10px;
 }
 
-.blog-list .side-left .tags ul li a {
+.blog-list .side-left .tags ul li a,
+.blog-page .tags ul li a{
 	-webkit-border-radius: 20px;
 			border-radius: 20px;
 }
