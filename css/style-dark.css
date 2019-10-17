@@ -2184,14 +2184,14 @@ blockquote:before,
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
-	width: 50%;
+	width: 75%;
 }
 
 .blog-page .blog-content iframe{
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
-	width: 40%;
+	width: 65%;
 }
 
 .blog-page .blog-content ul li{
