@@ -2187,6 +2187,27 @@ blockquote:before,
 	width: 50%;
 }
 
+.blog-page .blog-content iframe{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 40%;
+}
+
+.blog-page .blog-content ul li{
+	display: list-item !important;	
+	list-style: disc !important;
+	list-style-position: inside;
+	margin-left: 50px;
+}
+
+.blog-page .blog-content ol li{
+	display: list-item !important;	
+	list-style: decimal!important;
+	list-style-position: inside;
+	margin-left: 50px;
+}
+
 .image-caption {
 	margin-top: 2.5px;
 	text-align: center;
