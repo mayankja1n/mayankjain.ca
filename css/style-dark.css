@@ -2214,6 +2214,23 @@ blockquote:before,
 	color: lightgray
 }
 
+.quote-1{
+	font-style: italic;
+	border-left-style: solid;
+	padding-left: 15px;
+}
+
+.quote-2{
+	font-style: italic;
+	font-size: 24px !important;
+	padding-left: 50px !important;
+	padding-right: 50px !important;
+}
+
+.blog-content i{
+	font-style: italic !important;
+}
+
 /* Tags */
 .blog-page .tags {
 	margin-bottom: 50px;

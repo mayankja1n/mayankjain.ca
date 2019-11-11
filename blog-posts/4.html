@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+    	<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-151005557-1"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+
+		  gtag('config', 'UA-151005557-1');
+		</script>
+		
+		<!-- Meta -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+		
+		<!-- Title -->
+		<title>Mayank Jain - The Basics of Neural Networks</title>
+		<link rel="icon" href="../favicon.ico">
+
+		<!-- CSS Plugins -->
+        <link rel="stylesheet" href="../css/plugins/bootstrap.min.css">
+        <link rel="stylesheet" href="../css/plugins/font-awesome.css">
+		<link rel="stylesheet" href="../css/plugins/magnific-popup.css">
+		<link rel="stylesheet" href="../css/plugins/simplebar.css">
+		<link rel="stylesheet" href="../css/plugins/owl.carousel.min.css">
+		<link rel="stylesheet" href="../css/plugins/owl.theme.default.min.css">
+		<link rel="stylesheet" href="../css/plugins/jquery.animatedheadline.css">
+		
+		<!-- CSS Base -->
+        <link rel="stylesheet" href="../css/style-dark.css">
+		
+		<!-- Settings Style -->
+		<link rel="stylesheet" href="../css/settings/left-nav.css" />
+		<link rel="stylesheet" href="../css/settings/green-color.css" />
+		<link rel="stylesheet" href="../css/settings/circle-box.css" />
+		
+    </head>
+    <body>
+		<div id="fb-root"></div>
+		<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v5.0&appId=2468979790046300&autoLogAppEvents=1"></script>
+
+		<!-- Preloader -->
+		<div id="preloader">
+  			<div class="loading-area">
+    			<div class="circle"></div>
+  			</div>
+  			<div class="left-side"></div>
+  			<div class="right-side"></div>
+		</div>
+		
+		<div class="header-mobile">
+        	<a class="header-toggle"><i class="fas fa-bars"></i></a>
+        	<h2>Mayank Jain</h2>
+        </div>
+			
+		<!-- Left Block -->
+		<nav class="header-main" data-simplebar>
+		
+			<!-- Logo -->
+			<div class="logo">
+            	<img src="../img/logo.png" alt="">
+            </div>
+				
+          	<ul>
+				<li data-tooltip="home" data-position="top">
+            		<a href="../index.html#home" class="fas fa-house-damage"></a>
+				</li>
+				<h6 class="nav-headings">Home</h6>
+				
+				<li>
+            		<span class="active fas fa-receipt"></span>
+				</li>
+				<h6 class="nav-headings">Blog Post</h6>
+				
+				<li data-tooltip="back to blog" data-position="top">
+            		<a href="../index.html#blog" class="fas fa-long-arrow-alt-left"></a>
+				</li>
+				<h6 class="nav-headings">Back to Feed</h6>
+			</ul>
+		</nav>
+		
+		<!--Blog Page-->
+		<div class="blog-page" data-simplebar>
+			<nav class="blog-nav">
+            	<a href="3.html" data-tooltip="prev" data-position="left">
+					<i class="fas fa-long-arrow-alt-left"></i>
+				</a>
+            	<a href="../index.html#blog">
+					<i class="fas fa-bars"></i>
+				</a>
+            	<a href="5.html" data-tooltip="next" data-position="right">
+					<i class="fas fa-long-arrow-alt-right"></i>
+				</a>
+            </nav>
+			<div class="blog-image">
+				<img src="images/header-4.jpg" alt="">
+			</div>
+			<div class="row blog-container">
+				<div class="col-md-6 offset-md-3">
+						
+					<!-- Heading -->
+					<div class="blog-heading pt-70 pb-100">
+						<h2>The Basics of Neural Networks</h2>
+						<span><i class="fas fa-cogs"></i>AI</span>
+						<span><i class="fas fa-clock"></i>5 min read</span>
+						<span><i class="fas fa-calendar-alt"></i>January 16, 2019</span>
+					</div>
+
+					<!-- Content -->
+					<div class="blog-content">
+						<p>Humanity has been dreaming of creating intelligent inventions since as far back as 800 BC, when ancient Greeks wrote about mechanical 
+							men created by the Gods. In the last century, technology has been progressing exponentially and has brought us to a point where that 
+							dream of self-aware robots is no longer associated with magic. The creation of <i>Artificial Intelligence</i> has allowed us to create amazing 
+							programs that can far surpass the abilities of any human.</p>
+
+						<p>The key advancement in the field of artificial intelligence that allowed us to do amazing things like creating chat-bots and detect 
+							malignant tumors was the discovery of <b>neural networks</b>. Before this, programmers created relatively simple regression models to 
+							predict and classify data. However, these models had their limitations.</p>
+
+						<h3>What are Neural Networks</h3><br>
+						<p>A neural network is exactly what it says in the name. It is a network of neurons that are used to process information. To create these, 
+							scientists looked at the most advanced data processing machine at the time — the brain. Our brains process information using networks 
+							of neurons. They receive an input, process it, and accordingly output electric signals to the neurons it is connected to. Using 
+							bio-mimicry, we were able to apply the architecture of our brains to further the field of artificial intelligence.</p>
+						
+						<br>
+							<img src="images/4-1.jpg" alt="">
+						<br>
+						
+						<p>Artificial neural networks recreate the structure of human neurons to process information resulting in much more accurate results than 
+							previously used regression models.</p>
+						
+						<h3>The Parts of a Neural Network</h3><br>
+
+						<br>
+							<img src="images/4-2.jpg" alt="">
+						<br>
+						
+						<p>A neural network is made up of 3 main parts:</p>
+						
+						<h3>Input Layer</h3><br>
+						<p>This is literally the layer that inputs information for the neural network to process. Each circle represents 1 feature (a piece of information). This can be anything. It could be the square footage of your house for a house price prediction program, or the value of a pixel on a screen for a computer vision program</p>
+						
+						<h3>Hidden Layers</h3><br>
+						<p>These layers do all the processing for neural networks. You can have as many of these as you want. Generally speaking, the more hidden 
+							layers you have, the more accurate the neural network will be. Each layer consists of nodes that mimic our brains’ neurons. These 
+							nodes receive information from the previous layer’s nodes, multiply it by <b>weight</b> and then add a <b>bias</b> to it. Each line in the diagram 
+							represents a weight. That may sound confusing so here’s an analogy:</p>
+
+						<p>Let’s say I want to predict my SAT score and I have gathered two pieces of data: the number of hours I prepared, and the breakfast I 
+							had on the day of the test. These would go into the input layer. It’s quite obvious that the hours I spend preparing will have a much 
+							greater impact on my mark than my breakfast (or everyone would ace the SAT). Because of this, the hours I spend studying receive a 
+							significantly larger <b>weight value</b> to be multiplied by. Now, granted, there’s a chance that your breakfast may vary slightly impact 
+							your score, so it will receive a much lower weight value.</p>
+						
+						<h3>Output Layer</h3><br>
+						<p>This layer simply brings together the information from the last hidden layer of the network to output all the information you need 
+							from the program.</p>
+							
+						<h2 class="text-break">· · ·</h2><br>
+
+						<p>To sum up, neural networks take information from the input layer, process it in the hidden layers, and output the desired information 
+							in the output layer. This whole process of running a neural network is called <b>forward propagation.</b></p>
+							
+						<h3>Training Neural Networks</h3><br>
+						
+						<p>After understanding the structure of neural networks, you may be wondering how a neural network knows what biases and weights to use. 
+							Neural networks often start off with random weights and biases, but then train themselves over and over again till they reach peak 
+							performance. They do this by calculating the amount of error they currently have. This is called <b>the cost</b> of the neural network. 
+							This is calculated by finding the difference between the network’s prediction, and the desired result and finding the sum of those 
+							error values’ squares (target - output)².</p>
+
+						<br>
+							<img src="images/4-3.jpg" alt="">
+							<p class="image-caption">The squares of the difference between the prediction and actual value</p>
+						<br>
+
+						<p>In the graph, the red line represents the predictions of a simple neural network. The blue dots are the correct predictions. The 
+							neural network calculates how far the predictions (red line) are from the actual values (blue dots) and squares it (creates the green 
+							squares). It then adds up those squared values to give you the cost of the neural network.</p>
+
+						<h3>Optimizing the Weights and Biases</h3><br>
+						<p>The entire goal of training the neural network is to minimize the cost. Neural networks do this using a process called <b>backpropagation</b>. 
+							This seems like a complicated word but its quite simple. As I previously mentioned, forward propagation is when you run information 
+							through a neural network to give you a result. Backward propagation is literally the same thing but backward. You just start at the 
+							output layer and run the neural network in reverse to optimize the weights and biases. The math is quite complicated and beyond the 
+							scope of this article, but you can always go search the internet if you’re interested in learning it!</p>
+
+						<h2 class="text-break">· · ·</h2><br>
+
+						<p>While this article only covered the basic theory of neural networks, there’s a lot of advanced calculus and matrix operations that go 
+							into actually performing all these complicated processes. There’s still so much more to learn — from types of neural networks (like 
+							RNNs, CNNs, and GANs) to other important training calculations like gradient descent.</p>
+
+						<p>The 21st century revolves around the use of data and artificial intelligence is the most powerful data processing tool ever created. Because of 
+							this, <b>artificial intelligence will disrupt every industry.</b> It doesn’t matter if you’re a teacher, a chef, a lawyer, or a doctor. 
+							Artificial Intelligence 100% has the ability to disrupt your industry. Don’t believe me? AI can create customized lesson plans for 
+							students, design creative new recipes, draft up legal documents, and create highly accurate diagnoses of various medical illnesses. 
+							<b>For better or for worse, AI is coming to change the world.</b></p>
+							
+					</div>
+
+					<div class="tags">
+						<h4>Tags</h4>
+						<ul>
+							<li><a href="">#Artificial Intelligence</a></li>
+							<li><a href="">#Neural Networks</a></li>
+							<li><a href="">#Innovation</a></li>
+							<li><a href="">#Machine Learning</a></li>
+							<li><a href="">#Technology</a></li>
+						</ul>
+					</div>
+
+					<div class="fb-comments" data-href="https://mayankjain.ca/blog-posts/4.html" data-width="" data-numposts=""></div>
+
+				</div>
+			</div>
+		</div>
+		
+		<!-- All Script -->
+		<script src="../js/jquery.min.js"></script>
+		<script src="../js/isotope.pkgd.min.js"></script>
+		<script src="../js/bootstrap.min.js"></script>
+		<script src="../js/simplebar.js"></script>
+		<script src="../js/owl.carousel.min.js"></script>
+		<script src="../js/jquery.magnific-popup.min.js"></script>
+		<script src="../js/jquery.animatedheadline.min.js"></script>
+		<script src="../js/jquery.easypiechart.js"></script>
+		<script src="../js/jquery.validation.js"></script>
+		<script src="../js/tilt.js"></script>
+        <script src="../js/main.js"></script>
+        <script src="https://maps.google.com/maps/api/js?sensor=false"></script>
+    </body>
+</html>
