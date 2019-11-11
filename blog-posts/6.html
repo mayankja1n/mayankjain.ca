@@ -112,6 +112,7 @@
 
 					<!-- Content -->
 					<div class="blog-content">
+
 						<p>Since the boom of artificial intelligence, every industry is being disrupted with powerful neural networks that can beat humans at a whole bunch of things.</p>
 						
 						<h3>First AI Beat us at Chess</h3>
@@ -126,25 +127,22 @@
 							<img src="images/6-2.jpg" alt="">
 						<br><br>
 
-						<p>Basically there’s no limit to what AI can do.</p>
+						<p>
+							There's no limit to what AI can do. <br><br>
+							These advances got me really excited about artificial intelligence, so I decided to create my own neural network. <b>I made an artificial neural network that can diagnose malaria.</b> <br><br>
+							According to the World Health Organization, <b>there were about 220 million cases of malaria in 2017 alone and the death toll has reached over 500,000.</b> <br><br>
+							Being able to diagnose malaria is so important because it helps people get treatment sooner and stops them from spreading it to other people.
+							The reality is that not everyone has the same access to healthcare as we do in Canada. Many people in third world countries get little to no healthcare. Using artificial intelligence we can make diagnostic medical care more accessible.
+							I created a CNN (convolutional neural network) to classify images of blood smears as either infected with malaria or not infected.
 
-						<p>These advances got me really excited about artificial intelligence, so I decided to create my own neural network. <b>I made an artificial neural network that can diagnose malaria.</b></p>
-						
-						<p>According the World Health Organization <b>there were about 220 million cases of malaria in 2017 alone and the death tole has reached over 500,000.</b></p>
-						
-						<p>To sum up, neural networks take information from the input layer, process it in the hidden layers, and output the desired information 
-							in the output layer. This whole process of running a neural network is called <b>forward propagation.</b></p>
-						
-						<p>Being able to diagnose malaria is so important because it helps people get treatment sooner and stops them from spreading it to other people.</p>
+						</p>	
 
-						<p>The reality is that not everyone has the same access to healthcare as we do in Canada. Many people in third world countries get little to no healthcare. Using artificial intelligence we can make diagnostic medical care more accessible.</p>
-								
-						<p>I created a CNN (convolutional neural network) to classify images of blood smears as either infected with malaria, or not infected.</p>
-							
 						<h3>What is a CNN?</h3><br>
 
-						<p>A convolutional neural network is basically just a series of various filters. The order of these layer types and how much you use them decide how well the network does.</p>
-						<p>It takes the image and converts it into a matrix of numbers by taking the RGB values of each pixel so that the computer can run math on the image.</p>
+						<p>
+							A convolutional neural network is just a series of various filters. The order of these layer types and how much you use them decide how well the network does. <br><br>
+							It takes the image and converts it into a matrix of numbers by taking the RGB values of each pixel so that the computer can run the math on the image. <br><br>
+						</p>
 
 						<br>
 							<img src="images/6-3.jpg" alt="">
@@ -163,14 +161,10 @@
 						
 						<p>
 							In the gif, the green table represents a simplified version of an image. The 1s represent a black pixel and a zero represents a white pixel. <br><br>
-							
-							The yellow 3x3 table is a filter that checks for a certain type of pattern in the image called a feature. If you were classifying a car, you might have 1 filter for wheels, another for a windows etc. This filter is called a feature map. <br><br>
-							
+							The yellow 3x3 table is a filter that checks for a certain type of pattern in the image called a feature. If you were classifying a car, you might have 1 filter for wheels, another for windows, etc. This filter is called a feature map. <br><br>
 							The feature map moves around the image to check how much that feature is present in that part of the image. Then it takes that score and puts it in a new matrix that will be fed to the next part of the network. In this case that is the pink table. <br><br>
-							
-							The score is made by multiplying the value of the feature map by the value of image pixel it overlaps with. Then you add up all the products and put that in the new table. The feature map, then shifts to a different part of the image and does the same thing. <br><br>
-							
-							In the gif, you can see the values of the filter map as the red numbers. In that case you can see it checking for an X in every part of the image.
+							The score is made by multiplying the value of the feature map by the value of the image pixel it overlaps with. Then you add up all the products and put that in the new table. The feature map then shifts to a different part of the image and does the same thing. <br><br>
+							In the gif, you can see the values of the filter map as the red numbers. In that case, you can see it checking for an X in every part of the image. <br><br>
 						</p>
 
 						<h4>Pooling Layers</h4><br>
@@ -193,9 +187,9 @@
 							This layer is like a traditional neural network where every node in one layer is connected to every node in the next layer. <br><br>
 							Fully connected layers come towards the end of a convolutional neural network. The idea is that by then, each node has 1 value representing how present a feature was in the image. <br><br>
 							This layer is then trained to assign each feature a certain say in what the image is classified. <br><br>
-							For example, if we were classifying images as cats or dogs, a feature map that checks for eyes in the image would be given a very low weight (because dogs and cats both have eyes so this doesn’t help much with the prediction). But a feature like triangular ears would be given a much higher weight because that’s something that cats have, but dogs don’t. <br><br>
+							For example, if we were classifying images as cats or dogs, a feature map that checks for eyes in the image would be given a very low weight (because dogs and cats both have eyes so this doesn't help much with the prediction). But a feature like triangular ears would be given a much higher weight because that's something that cats have, but dogs don't. <br><br>
 							These features then feed into output nodes. The number of output nodes depends on the number of objects the model is trained to classify. <br><br>
-							You can learn more about how the neural networks assigns its weights here.
+							You can learn more about how the neural network assigns its weights <a href="https://mayankjain.ca/blog-posts/4">here</a>
 						</p>
 
 						<h3>How I Built My Model</h3><br>
@@ -206,16 +200,16 @@
 						<br><br>
 
 						<p>
-							The first line of code defines the structure of the neural network as sequential. This just means that each layer feeds directly to the next layer and no layers ever connects backwards. <br><br>
-							Each time I call the “model.add” function, I’m just adding a layer to the structure of the neural network. <br><br>
-							A “Conv2d” is just a 2D convolution layer (since we are dealing with 2 images). 64 represents the number of features the layer tests for. The 3x3 defines how big the feature map is. And the input shape literally defines the size of the image being inputted. the 3 represents the RGB layers. The “relu” activation function just turns all negative numbers into zeros. <br><br>
-							A “MaxPooling2D” is literally a 2D max pooling layer. The (2, 2) defines the dimensions of the filter. This means that its will always take the highest value from each 2x2 section of the image.
-							The <b>dropout layer</b> tells the layer to randomly disable nodes during training. (The 0.2 means there’s a 20% chance they will be disabled). I did this because sometimes, neural networks let one part of the network dominate other parts so then the other parts don’t get trained. <br><br>
-							It’s like if you had 1 really loud person on a team giving ideas. The other people may just not be confident enough to contribute. So you just need to shut up that loud guy, so that the other people have a chance to contribute to the team. A dropout layers tells one part of the network to rest so the others have a chance to train and get better. <br><br>
-							The “Flatten” layer just takes a 2D matrix and turns it into a 1D matrix. e.g. flattening a 4x5 layer into a 20x1 matrix. <br><br>
-							The Dense Layer just adds a layer with a certain number of nodes. (In this case there are 64). This is a fully connected layer that assigns weight to each feature. You might remember that I had the first convolutional layer output 64 features. This is why this dense layer has 64 nodes: 1 for each feature. <br><br>
-							The last Dense layer has a number of nodes equivalent to the number of classes the network identifies. In this case that variable is set to 2. This layer uses a “softmax” activation function instead of a “relu”. This just makes sure that the final outputs add up to one. This way we get a percent probability for each class. E.g. the final outputs might be 0.76 and 0.24. This means that the image has a 76% chance of being one class and a 24% chance of being another. <br><br>
-							The final line of code tells the network what it should optimize for and how to calculate its loss (how bad its doing).
+							The first line of code defines the structure of the neural network as sequential. This just means that each layer feeds directly to the next layer and no layers ever connect backward. <br><br>
+							Each time I call the "model.add" function, I'm just adding a layer to the structure of the neural network. <br><br>
+							A "Conv2d" is just a 2D convolution layer (since we are dealing with 2 images). 64 represents the number of features the layer tests for. The 3x3 defines how big the feature map is. The input shape defines the size of the image being inputted. the 3 represents the RGB layers. The "relu" activation function just turns all negative numbers into zeros. <br><br>
+							A "MaxPooling2D" is just a 2D max-pooling layer. The (2, 2) defines the dimensions of the filter. This means that it will always take the highest value from each 2x2 section of the image. <br><br>
+							The <b>dropout layer</b> tells the layer to randomly disable nodes during training. (The 0.2 means there's a 20% chance they will be disabled). I did this because sometimes, neural networks let one part of the network dominate other parts and then the other parts don't get trained. <br><br>
+							It's like if you had 1 really loud person on a team giving ideas. The other people may just not be confident enough to contribute. So you just need to shut up that loud guy, so that the other people have a chance to contribute to the team. A dropout layer tells one part of the network to rest so the others have a chance to train and get better. <br><br>
+							The "Flatten" layer just takes a 2D matrix and turns it into a 1D matrix. e.g. flattening a 4x5 layer into a 20x1 matrix. <br><br>
+							The Dense Layer just adds a layer with a certain number of nodes. (In this case, there are 64). This is a fully connected layer that assigns a weight to each feature. You might remember that I had the first convolutional layer output 64 features. This is why this dense layer has 64 nodes: 1 for each feature. <br><br>
+							The last Dense layer has a number of nodes equivalent to the number of classes the network identifies. In this case, that variable is set to 2. This layer uses a "softmax" activation function instead of a "relu". This just makes sure that the final outputs add up to one. This way we get a percent probability for each class. E.g. the final outputs might be 0.76 and 0.24. This means that the image has a 76% chance of being one class and a 24% chance of being another. <br><br>
+							The final line of code tells the network what it should optimize for and how to calculate its loss (how bad it's doing). <br><br>
 						</p>
 
 						<h2 class="text-break">· · ·</h2><br>
@@ -234,14 +228,13 @@
 							40/40 [==============================] - 132s 3s/step - loss: 0.1700 - acc: 0.9500 - val_loss: 0.2158 - val_acc: 0.9637
 						</p>
 
-						<p>96% accuracy.</p>
-
 						<p>
-							<b>My model had 96% accuracy!</b> If I ran the model for even more epochs, I could probably get even higher! <br>
-							<b>This beats microscopy diagnosis methods which only have an accuracy of 93%.</b> <br>
-							By putting this neural network on the internet, we can make malaria diagnosis relatively more accessible. <br>
-							Now if you’re in a poor country, <b>you don’t need a doctor to diagnose yourself, you just need 1 smartphone to diagnose as many people as you want</b>. By making malaria diagnosis much more affordable and accessible we can save tens of thousands of lives. <br>
-							Artificial intelligence will truly disrupt the future of medicine and I can’t wait to see it happen.
+							96% accuracy. <br><br>
+							<b>My model had 96% accuracy!</b> If I ran the model for even more epochs, I could probably get even higher! <br><br>
+							<b>This beats microscopy diagnosis methods which only have an accuracy of 93%.</b> <br><br>
+							By putting this neural network on the internet, we can make malaria diagnosis relatively more accessible. <br><br>
+							Now if you're in a poor country, you don't need a doctor to diagnose yourself, you just need 1 smartphone to diagnose as many people as you want. By making malaria diagnosis much more affordable and accessible we can save tens of thousands of lives. <br><br>
+							Artificial intelligence will truly disrupt the future of medicine and I can't wait to see it happen. <br><br>
 						</p>
 							
 					</div>
