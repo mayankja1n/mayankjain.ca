@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+    	<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-151005557-1"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+
+		  gtag('config', 'UA-151005557-1');
+		</script>
+		
+		<!-- Meta -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+		
+		<!-- Title -->
+		<title>Mayank Jain - Using AI to Predict Facebook’s Stock Price</title>
+		<link rel="icon" href="../favicon.ico">
+
+		<!-- CSS Plugins -->
+        <link rel="stylesheet" href="../css/plugins/bootstrap.min.css">
+        <link rel="stylesheet" href="../css/plugins/font-awesome.css">
+		<link rel="stylesheet" href="../css/plugins/magnific-popup.css">
+		<link rel="stylesheet" href="../css/plugins/simplebar.css">
+		<link rel="stylesheet" href="../css/plugins/owl.carousel.min.css">
+		<link rel="stylesheet" href="../css/plugins/owl.theme.default.min.css">
+		<link rel="stylesheet" href="../css/plugins/jquery.animatedheadline.css">
+		
+		<!-- CSS Base -->
+        <link rel="stylesheet" href="../css/style-dark.css">
+		
+		<!-- Settings Style -->
+		<link rel="stylesheet" href="../css/settings/left-nav.css" />
+		<link rel="stylesheet" href="../css/settings/green-color.css" />
+		<link rel="stylesheet" href="../css/settings/circle-box.css" />
+		
+    </head>
+    <body>
+		<div id="fb-root"></div>
+		<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v5.0&appId=2468979790046300&autoLogAppEvents=1"></script>
+
+		<!-- Preloader -->
+		<div id="preloader">
+  			<div class="loading-area">
+    			<div class="circle"></div>
+  			</div>
+  			<div class="left-side"></div>
+  			<div class="right-side"></div>
+		</div>
+		
+		<div class="header-mobile">
+        	<a class="header-toggle"><i class="fas fa-bars"></i></a>
+        	<h2>Mayank Jain</h2>
+        </div>
+			
+		<!-- Left Block -->
+		<nav class="header-main" data-simplebar>
+		
+			<!-- Logo -->
+			<div class="logo">
+            	<img src="../img/logo.png" alt="">
+            </div>
+				
+          	<ul>
+				<li data-tooltip="home" data-position="top">
+            		<a href="../index.html#home" class="fas fa-house-damage"></a>
+				</li>
+				<h6 class="nav-headings">Home</h6>
+				
+				<li>
+            		<span class="active fas fa-receipt"></span>
+				</li>
+				<h6 class="nav-headings">Blog Post</h6>
+				
+				<li data-tooltip="back to blog" data-position="top">
+            		<a href="../index.html#blog" class="fas fa-long-arrow-alt-left"></a>
+				</li>
+				<h6 class="nav-headings">Back to Feed</h6>
+			</ul>
+		</nav>
+		
+		<!--Blog Page-->
+		<div class="blog-page" data-simplebar>
+			<nav class="blog-nav">
+            	<a href="6.html" data-tooltip="prev" data-position="left">
+					<i class="fas fa-long-arrow-alt-left"></i>
+				</a>
+            	<a href="../index.html#blog">
+					<i class="fas fa-bars"></i>
+				</a>
+            	<a href="8.html" data-tooltip="next" data-position="right">
+					<i class="fas fa-long-arrow-alt-right"></i>
+				</a>
+            </nav>
+			<div class="blog-image">
+				<img src="images/header-6.jpg" alt="">
+			</div>
+			<div class="row blog-container">
+				<div class="col-md-6 offset-md-3">
+						
+					<!-- Heading -->
+					<div class="blog-heading pt-70 pb-100">
+						<h2>Using AI to Predict Facebook’s Stock Price</h2>
+						<span><i class="fas fa-cogs"></i>AI</span>
+						<span><i class="fas fa-clock"></i>5 min read</span>
+						<span><i class="fas fa-calendar-alt"></i>March 4, 2019</span>
+					</div>
+
+					<!-- Content -->
+					<div class="blog-content">
+
+						<p>For decades, stock trading looked like this</p>
+
+						<br>
+						<img src="images/7-1.jpg" alt="">
+						<br><br>
+
+						<p>
+							But then technology got more advanced and everyone moved over to putting in trade requests online. <br><br>
+							Now we’ve reached another evolution in stock trading — algorithmic trading. <br><br>
+							Large investment banks like Goldman Sachs have already seen the power of algorithmic trading and have replaced hundreds of traders with computer engineers. <br><br>
+							This blew my mind and got me curious about how I could make my own algorithm. <br><br>
+						</p>
+						
+						<br>
+							<img src="images/7-2.jpg" alt="">
+						<br><br>
+
+						<p>
+							I got into trading Facebook stocks a couple of months ago, so I thought it would be cool to train an AI to do better than I did. <br><br>
+							So I started looking more into a branch of artificial intelligence that would work well for stock market prediction — <b>Recurrent Neural Networks.</b>
+							Traditional neural works work by taking information, putting it through various mathematical functions and then turning it into a useful output. You can read more about traditional neural networks and how they work in this article: <a href="https://mayankjain.ca/blog-posts/4">The Basic of Neural Networks.</a><br><br>
+							The problem with these traditional neural networks is that they can’t use previous predictions as context for their next predictions.
+							This is because they use <i>feed-forwards neurons</i>. These neurons take an input and output something, but when they’re used again, there is no way for them to reference their previous predictions.
+						</p>
+
+						<br>
+							<img src="images/7-3.jpg" alt="">
+						<br><br>
+
+						<p>
+								Recurrent neural networks solve this by using recurrent neurons. These take their outputs, and use them as data for their next prediction. <br><br>
+								This is super useful for AI algorithms like speech-to-text where the probabilities for each possible next word is based largely on the previous word because of the language’s syntax rules. <br><br>
+								One problem with recurrent nets is that even though they can remember their previous decisions, their memory eventually fades. <br><br>
+								In the case of predicting stocks, that means that as we feed the neural network more and more years of data, eventually it’ll forget about the earliest data and won’t be able to get as much value from it. <br><br>
+								The solution to this is called LSTM (aka. Long-Short-Term Memory). This is a technique used in artificial intelligence that uses “memory cells” in neural networks that act as brains. <br><br>
+						</p>
+
+						<br>
+						<img src="images/7-4.gif" alt="">
+						<br><br>
+						
+						<p>
+							Each LSTM layer is made up of multiple mini neural networks that are trained to optimally use memory to make accurate predictions. <br><br>
+							The <b>memory gate</b> collects the possible outputs the network can come up with and stores the relevant ones for later use. <br><br>
+							The <b>selection gate</b> uses the memories to select a final output from all the possibilities that the network comes up with. <br><br>
+							The <b>ignore/forget gate</b> decides which memories are irrelevant to the decision-making process and gets rid of them. <br><br>
+							LSTMs become especially valuable for stock prediction because they can use historical trends and data to decide how a stock will move. <br><br>
+						</p>
+
+						<h4>Training the Model</h4><br>
+
+						<p>
+							The data I used to train my model came directly from NASDAQ’s website. I got 5 years of Facebook’s historical price data (2012–2017). <br><br>
+							My network has 3 LSTM layers that each have 50 nodes, meaning that there are 50 features the network looks for.
+						</p>
+
+						<br>
+						<img src="images/7-5.gif" alt="">
+						<p class="image-caption">Training a recurrent neural network</p>
+						<br><br>
+
+						<p>
+							Every time the network goes through one training cycle, it uses its memory cells to keep parts of its older versions to make better decisions. <br><br>
+							My network ends with an output layer with 1 node that outputs the AI’s guess for the opening price for Facebook’s stock the next day. <br><br>
+							It measures its inaccuracy using a loss function called <i>“mean squared error”</i>. This measures how far off the predictions were from the actual values and squares them. Then it adds up those squares. <br><br>
+							The neural network uses a popular optimizer called “adam” to reduce the error and make the network more accurate. <br><br>
+							After training the neural network for 100 training cycles (called epochs) I tested my data on stock data that the network had never seen before to simulate how it would perform in the real world. <br><br>
+							The network was told to buy the stock if it predicted a certain threshold of drop in the stock and to sell it if it predicted a certain threshold of increase. <br><br>
+						</p>
+
+						<br>
+						<img src="images/6-6.jpg" alt="">
+						<p class="image-caption">My Code for the Neural Network Architecture</p>
+						<br><br>
+
+						<p>
+							This graph shows the performance of my neural network over a year. The blue line is my AI’s prediction and the purple line is what the stock price actually was. The green dots represent a buy decision and a red dot represents a sell decision. <br><br>
+							Though the neural network still has much room for improvement it was able to generate a 36.22% return on investment. <br><br>
+							This means if you gave my AI $1000, it would hand you back $1362.20! <br><br>
+							I’m excited to learn more about RNNs overtime and make even better stock trading algorithms! <br><br>
+						</p>							
+					</div>
+
+					<div class="tags">
+						<h4>Tags</h4>
+						<ul>
+							<li><a href="#">#Artificial Intelligence</a></li>
+							<li><a href="#">#Neural Networks</a></li>
+							<li><a href="#">#Machine Learning</a></li>
+							<li><a href="#">#Fintech</a></li>
+							<li><a href="#">#Stock Market</a></li>
+						</ul>
+					</div>
+
+					<div class="fb-comments" data-href="https://mayankjain.ca/blog-posts/7.html" data-width="" data-numposts=""></div>
+
+				</div>
+			</div>
+		</div>
+		
+		<!-- All Script -->
+		<script src="../js/jquery.min.js"></script>
+		<script src="../js/isotope.pkgd.min.js"></script>
+		<script src="../js/bootstrap.min.js"></script>
+		<script src="../js/simplebar.js"></script>
+		<script src="../js/owl.carousel.min.js"></script>
+		<script src="../js/jquery.magnific-popup.min.js"></script>
+		<script src="../js/jquery.animatedheadline.min.js"></script>
+		<script src="../js/jquery.easypiechart.js"></script>
+		<script src="../js/jquery.validation.js"></script>
+		<script src="../js/tilt.js"></script>
+        <script src="../js/main.js"></script>
+        <script src="https://maps.google.com/maps/api/js?sensor=false"></script>
+    </body>
+</html>
