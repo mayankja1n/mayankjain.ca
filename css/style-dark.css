@@ -2167,7 +2167,8 @@ blockquote:before,
 .blog-page .blog-content p, li {
 	font-size: 18px;
 	font-weight: normal;
-    line-height: 1.6;
+	line-height: 1.58;
+	margin-bottom: 2vw;
 }
 
 .blog-page .blog-content h3 {
@@ -3252,4 +3253,13 @@ blockquote:before,
 	padding-top: 5px;
 	font-size: 12px !important;
 	font-weight: 100 !important;
+}
+
+.im-sm{
+	width: 50% !important;
+}
+
+.im-lg{
+	max-width: 100% !important;
+	width: 100% !important;
 }

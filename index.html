@@ -12,10 +12,17 @@
 		  gtag('config', 'UA-151005557-1');
 		</script>
 
-		<!-- Mailchimp Popup -->
+		<!-- MailerLite Universal -->
+		<script>
+		(function(m,a,i,l,e,r){ m['MailerLiteObject']=e;function f(){
+		var c={ a:arguments,q:[]};var r=this.push(c);return "number"!=typeof r?r:f.bind(c.q);}
+		f.q=f.q||[];m[e]=m[e]||f.bind(f.q);m[e].q=m[e].q||f.q;r=a.createElement(i);
+		var _=a.getElementsByTagName(i)[0];r.async=1;r.src=l+'?v'+(~~(new Date().getTime()/1000000));
+		_.parentNode.insertBefore(r,_);})(window, document, 'script', 'https://static.mailerlite.com/js/universal.js', 'ml');
 
-		<script type="text/javascript" src="//downloads.mailchimp.com/js/signup-forms/popup/unique-methods/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script><script type="text/javascript">window.dojoRequire(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us19.list-manage.com","uuid":"25edece71e641081530b49173","lid":"125387ed71","uniqueMethods":true}) })
+		var ml_account = ml('accounts', '1339656', 'q6y6q2g3r5', 'load');
 		</script>
+		<!-- End MailerLite Universal -->
 		
 		<!-- Meta -->
         <meta charset="UTF-8">
@@ -747,6 +754,21 @@
 						</div>
 						 -->
 
+						 <!-- Blog Item-->
+						 <div class="col-lg-4 col-sm-6">
+							<div class="blog-item">
+								<div class="thumbnail">
+									<a href="blog-posts/17.html"><img alt="" src="img/blog-thumbnails/thumbnail-17.jpg"></a>
+								</div>
+								<h4><a href="blog-posts/17.html">NLP: From Watermelon Boxes to Word Embeddings</a></h4>
+								<ul>
+                            		<li>22 April 2020</li>
+									<li>AI</li>
+									<li>x min read</li>
+                           		</ul>
+							</div>
+						</div>
+
 						<!-- Blog Item-->
 						<div class="col-lg-4 col-sm-6">
 								<div class="blog-item">
@@ -757,7 +779,7 @@
 									<ul>
 										<li>10 November 2019</li>
 										<li>Energy</li>
-										<li>6 min read</li>
+										<li>7 min read</li>
 									</ul>
 								</div>
 							</div>
