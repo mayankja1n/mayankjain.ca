@@ -1,0 +1,52 @@
+/* =============================================================================
+   HTML5 CSS Reset Minified - Eric Meyer
+   ========================================================================== */
+
+#particles-js{
+	height: 100vh;
+	width: 100%;
+	#background-image:url(img/Ringity.png);
+	background-repeat: no-repeat; 
+	background-size: cover;
+	z-index: 999;
+}
+
+#particle-overlay {
+	top: 3vw;
+	width: 100%;
+	height: 100%;
+  	position: absolute;
+  	color: #fff;
+  	z-index: 9999;
+}
+
+#home-text{
+	position: relative;
+	display: table;
+	width: 100%;
+	top: 5vh;
+}
+
+#Ring{
+	position: relative;
+	bottom: 21vh;
+	margin-top: 0;
+	align-content: right;
+	width: 66%;
+}
+
+@media only screen and (max-width: 400px){
+	#section0{
+		height: 100vh !important;
+	}
+	#home-text{
+		margin-top: 20vh;
+	}
+	#Ring{
+		width: 95%;
+		bottom: 40vh;
+	}
+	#Ring img{
+		width: 100%;
+	}
+}
