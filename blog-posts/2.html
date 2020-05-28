@@ -37,6 +37,8 @@
 		<link rel="stylesheet" href="../css/settings/left-nav.css" />
 		<link rel="stylesheet" href="../css/settings/green-color.css" />
 		<link rel="stylesheet" href="../css/settings/circle-box.css" />
+
+		<meta http-equiv="refresh" content="5; URL=https://mayankjain.ca/blog-posts/playing-games-with-your-mind-brain-controlled-snake.html" />
 		
     </head>
     <body>
@@ -56,123 +58,6 @@
         	<a class="header-toggle"><i class="fas fa-bars"></i></a>
         	<h2>Mayank Jain</h2>
         </div>
-			
-		<!-- Left Block -->
-		<nav class="header-main" data-simplebar>
-		
-			<!-- Logo -->
-			<div class="logo">
-            	<img src="../img/logo.png" alt="">
-            </div>
-				
-          	<ul>
-				<li data-tooltip="home" data-position="top">
-            		<a href="../index.html#home" class="fas fa-house-damage"></a>
-				</li>
-				<h6 class="nav-headings">Home</h6>
-				
-				<li>
-            		<span class="active fas fa-receipt"></span>
-				</li>
-				<h6 class="nav-headings">Blog Post</h6>
-				
-				<li data-tooltip="back to blog" data-position="top">
-            		<a href="../index.html#blog" class="fas fa-long-arrow-alt-left"></a>
-				</li>
-				<h6 class="nav-headings">Back to Feed</h6>
-			</ul>
-		</nav>
-		
-		<!--Blog Page-->
-		<div class="blog-page" data-simplebar>
-			<nav class="blog-nav">
-            	<a href="1.html" data-tooltip="prev" data-position="left">
-					<i class="fas fa-long-arrow-alt-left"></i>
-				</a>
-            	<a href="../index.html#blog">
-					<i class="fas fa-bars"></i>
-				</a>
-            	<a href="3.html" data-tooltip="next" data-position="right">
-					<i class="fas fa-long-arrow-alt-right"></i>
-				</a>
-            </nav>
-			<div class="blog-image">
-				<img src="images/header-2.jpg" alt="">
-			</div>
-			<div class="row blog-container">
-				<div class="col-md-6 offset-md-3">
-						
-					<!-- Heading -->
-					<div class="blog-heading pt-70 pb-100">
-						<h2>Playing Games with your Mind: Brain Controlled Snake</h2>
-						<span><i class="fas fa-brain"></i>BCIs</span>
-						<span><i class="fas fa-clock"></i>3 min read</span>
-						<span><i class="fas fa-calendar-alt"></i>November 22, 2018</span>
-					</div>
-
-					<!-- Content -->
-					<div class="blog-content">
-						<p>Electroencephalography (EEG) is a technology that allows us to read brainwaves in a non-invasive way. They are currently the most affordable and portable way to access brainwave data. Their excellent temporal resolution means that we can record data in real-time. For this project, I leveraged the high temporal resolution of EEGs to recreate the classic game snake to be controlled with your mind. The game uses the Muse headband to measure EEG data.
-						</p>
-						
-						<h2 class="text-break">· · ·</h2><br>
-						
-						
-						<h3>How the Game Works</h3><br>
-						<p>Unlike the original snake, which would take 4 inputs, (moving in the direction of the arrow keys) this version takes 2 inputs, either right or left.</p>
-						<br>
-						
-						<h4 style="">EEG Retrieval</h4><br>
-						<p>The first step to the game is retrieving the brainwave data from the player. The Muse headband uses Bluetooth to transmit the data to the computer. The computer receives the computer through a program called Muse Direct. This program then sends the data using UDP over a port on the computer.</p>
-						
-						<br>
-							<img src="images/2-1.jpg" alt="">
-						<br>
-						
-						<h4>The Game Recieves the Data</h4><br>
-						<p>The game acts as a client as listens to the port to access the raw EEG data from the headband.</p>
-						
-						<h4>Data Analysis</h4><br>
-						<p>The EEG data is then processes using classification algorithms to determine which way the player wants to turn. It figures out if the player has blinked or clenched their jaw.</p>
-						
-						<br>
-							<img src="images/2-2.jpg" alt="">
-							<p class="image-caption">EEG data recorded during blinking and jaw clenching</p>
-						<br>
-						
-						<p>As you can see, blinking and clenching your jaw create landmarks in your brainwave data that are easy to recognize. When you close your eyes, there is a negative spike in activity, while opening your eyes creates a positive spike in activity.</p>
-						<p>This is because when you close your eyes, your brain is fires neurons to activate the muscles in your eye lids. These signals cause interferences which are coming up as these spikes.</p>
-						<p>When you clench your Jaw, it causes even more aggressive interference in the recorded waves, which the game can easily pick up on.</p>
-						<p>These interferences are called artifacts, and while they are normally a bane of EEGs, they’re actually pretty useful as reliable BCI controls.</p>
-						
-						<br>
-							<img src="images/2-3.gif" alt="">
-						<br>
-						
-						<h4>Snake Movement</h4><br>
-						
-						<p>The game turns the snake based on the brainwaves and the user can now play the game without lifting a finger!</p>
-						
-					</div>
-
-					<div class="tags">
-						<h4>Tags</h4>
-						<ul>
-							<li><a href="">#Video Games</a></li>
-							<li><a href="">#Neuroscience</a></li>
-							<li><a href="">#EEG</a></li>
-							<li><a href="">#Brain Computer Interface</a></li>
-							<li><a href="">#Future</a></li>
-							<li><a href="">#Technology</a></li>
-							<li><a href="">#Neurotech</a></li>
-						</ul>
-					</div>
-
-					<div class="fb-comments" data-href="https://mayankjain.ca/blog-posts/2.html" data-width="" data-numposts=""></div>
-
-				</div>
-			</div>
-		</div>
 		
 		<!-- All Script -->
 		<script src="../js/jquery.min.js"></script>
