@@ -2164,7 +2164,7 @@ blockquote:before,
     padding-right: 15px;
 }
 
-.blog-page .blog-content p, li {
+.blog-content p, li {
 	font-size: 18px;
 	font-weight: normal;
 	line-height: 1.58;
@@ -3262,4 +3262,38 @@ blockquote:before,
 .im-lg{
 	max-width: 100% !important;
 	width: 100% !important;
+}
+
+.sub-heading{
+	color: lightgray;
+	font-size: medium;
+	margin-bottom: 25px;
+	font-weight: 500 ;
+}
+
+h4{
+	margin-bottom: 1.5vw;
+}
+
+h3{
+	margin-bottom: 1.75vw;
+}
+
+.fb-comments{
+	width: 50%;
+	margin: auto;
+}
+
+@media only screen and (min-width: 767px) {
+	.blog-container{
+		margin-left: 7.5vw !important;
+	}
+}
+
+.tags li{
+	margin-bottom: 0;
+}
+
+.portfolio-filter li{
+	margin-bottom: 0 !important;
 }
