@@ -35,7 +35,6 @@ import yearbook from "../public/portfolio/ai-yearbook-quote.jpg";
 
 const BLOG_THUMBNAILS = [
 	blog1,
-	blog1,
 	blog2,
 	blog3,
 	blog4,

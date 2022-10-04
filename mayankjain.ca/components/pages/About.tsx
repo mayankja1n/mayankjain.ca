@@ -58,7 +58,7 @@ export default function About() {
 									</p>
 								</div>
 
-								{/* <!-- Icon Info ---> */}
+								{/* <!-- Icon Info ---> 
 
 								<div className="col-lg-3 col-sm-4">
 									<div className="info-icon">
@@ -70,7 +70,7 @@ export default function About() {
 									</div>
 								</div>
 
-								{/* <!-- Icon Info ---> */}
+								/* <!-- Icon Info ---> 
 								<div className="col-lg-3 col-sm-4">
 									<div className="info-icon">
 										<i className="fas fa-certificate"></i>
@@ -81,7 +81,7 @@ export default function About() {
 									</div>
 								</div>
 
-								{/* <!-- Icon Info ---> */}
+								/* <!-- Icon Info ---> 
 								<div className="col-lg-3 col-sm-4">
 									<div className="info-icon">
 										<i className="fas fa-user-astronaut"></i>
@@ -91,12 +91,13 @@ export default function About() {
 										</div>
 									</div>
 								</div>
-
+                                
 								<div className="col-lg-3 col-sm-12 pt-50">
 									<a href="#" className="btn-st">
 										Download CV
 									</a>
 								</div>
+                                */}
 							</div>
 						</div>
 					</div>

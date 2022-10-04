@@ -1,5 +1,7 @@
 import Image from "next/image";
+import { BLOG_LINKS } from "../../utils/blogLinks";
 import { BLOG_THUMBNAILS } from "../../utils/imageImports";
+import BlogItem from "../atoms/BlogItem";
 
 export default function Blog() {
 	return (
@@ -80,280 +82,113 @@ export default function Blog() {
 														</div>
 													</div> */}
 
-					{/* <!-- Blog Item--> */}
+					<BlogItem
+						title="How to Evaluate your AI"
+						link={BLOG_LINKS[18]}
+						thumbnail={BLOG_THUMBNAILS[18]}
+						date="9 Aug 2020"
+						tag="AI"
+						readLen={3}
+					/>
 
-					<div className="col-lg-4 col-sm-6">
-						<div className="blog-item">
-							<div className="thumbnail">
-								<a href="blog-posts/how-to-evaluate-your-ai.html">
-									<Image alt="" src={BLOG_THUMBNAILS[19]} />
-								</a>
-							</div>
-							<h4>
-								<a href="blog-posts/how-to-evaluate-your-ai.html">
-									How to Evaluate your AI
-								</a>
-							</h4>
-							<ul>
-								<li>9 Aug 2020</li>
-								<li>AI</li>
-								<li>3 min read</li>
-							</ul>
-						</div>
-					</div>
+					<BlogItem
+						title="What fNIRS is and How it Works"
+						link={BLOG_LINKS[17]}
+						thumbnail={BLOG_THUMBNAILS[17]}
+						date="15 May 2020"
+						tag="BCIs"
+						readLen={5}
+					/>
+					<BlogItem
+						title="NLP: From Watermelon Boxes to Word Embeddings"
+						link={BLOG_LINKS[16]}
+						thumbnail={BLOG_THUMBNAILS[16]}
+						date="22 Apr 2020"
+						tag="AI"
+						readLen={7}
+					/>
+					<BlogItem
+						title="The Future of Battery Technology"
+						link={BLOG_LINKS[15]}
+						thumbnail={BLOG_THUMBNAILS[15]}
+						date="10 Nov 2019"
+						tag="Energy"
+						readLen={7}
+					/>
+					<BlogItem
+						title="Talk to Smart People and Figure Shit Out"
+						link={BLOG_LINKS[14]}
+						thumbnail={BLOG_THUMBNAILS[14]}
+						date="20 Oct 2019"
+						tag="Philosophy"
+						readLen={3}
+					/>
+					<BlogItem
+						title="IoT Has Disrupted the way we Feed our Planet"
+						link={BLOG_LINKS[13]}
+						thumbnail={BLOG_THUMBNAILS[13]}
+						date="16 Oct 2019"
+						tag="IoT"
+						readLen={5}
+					/>
+					<BlogItem
+						title="Using AI to Predict Facebook's Stock Price"
+						link={BLOG_LINKS[6]}
+						thumbnail={BLOG_THUMBNAILS[6]}
+						date="4 March 2019"
+						tag="AI"
+						readLen={5}
+					/>
+					<BlogItem
+						title="How a 16-year-old learned to Diagnose Malaria in a Day"
+						link={BLOG_LINKS[5]}
+						thumbnail={BLOG_THUMBNAILS[5]}
+						date="25 Feb 2019"
+						tag="AI"
+						readLen={7}
+					/>
+					<BlogItem
+						title="The Pereson who Changed my Perspective of Life"
+						link={BLOG_LINKS[4]}
+						thumbnail={BLOG_THUMBNAILS[4]}
+						date="1 Feb 2019"
+						tag="Philosophy"
+						readLen={6}
+					/>
+					<BlogItem
+						title="The Basics of Neural Networks"
+						link={BLOG_LINKS[3]}
+						thumbnail={BLOG_THUMBNAILS[3]}
+						date="16 Jan 2019"
+						tag="BCIs"
+						readLen={5}
+					/>
+					<BlogItem
+						title="Brain to Speech Translation: A New Way to Communicate"
+						link={BLOG_LINKS[2]}
+						thumbnail={BLOG_THUMBNAILS[2]}
+						date="5 Dec 2018"
+						tag="BCIs"
+						readLen={3}
+					/>
 
-					<div className="col-lg-4 col-sm-6">
-						<div className="blog-item">
-							<div className="thumbnail">
-								<a href="blog-posts/what-fnirs-is-and-how-it-works.html">
-									<Image alt="" src={BLOG_THUMBNAILS[18]} />
-								</a>
-							</div>
-							<h4>
-								<a href="blog-posts/what-fnirs-is-and-how-it-works.html">
-									What fNIRS is and How it Works
-								</a>
-							</h4>
-							<ul>
-								<li>15 May 2020</li>
-								<li>BCIs</li>
-								<li>5 min read</li>
-							</ul>
-						</div>
-					</div>
+					<BlogItem
+						title="Brain Controlled Snake"
+						link={BLOG_LINKS[1]}
+						thumbnail={BLOG_THUMBNAILS[1]}
+						date="22 Nov 2018"
+						tag="BCIs"
+						readLen={3}
+					/>
 
-					{/* <!-- Blog Item--> */}
-					<div className="col-lg-4 col-sm-6">
-						<div className="blog-item">
-							<div className="thumbnail">
-								<a href="blog-posts/nlp-from-watermelon-boxes-to-word-embeddings.html">
-									<Image alt="" src={BLOG_THUMBNAILS[17]} />
-								</a>
-							</div>
-							<h4>
-								<a href="blog-posts/nlp-from-watermelon-boxes-to-word-embeddings.html">
-									NLP: From Watermelon Boxes to Word Embeddings
-								</a>
-							</h4>
-							<ul>
-								<li>22 April 2020</li>
-								<li>AI</li>
-								<li>7 min read</li>
-							</ul>
-						</div>
-					</div>
-
-					{/* <!-- Blog Item--> */}
-					<div className="col-lg-4 col-sm-6">
-						<div className="blog-item">
-							<div className="thumbnail">
-								<a href="blog-posts/16.html">
-									<Image alt="" src={BLOG_THUMBNAILS[16]} />
-								</a>
-							</div>
-							<h4>
-								<a href="blog-posts/16.html">
-									The Future of Battery Technology
-								</a>
-							</h4>
-							<ul>
-								<li>10 November 2019</li>
-								<li>Energy</li>
-								<li>7 min read</li>
-							</ul>
-						</div>
-					</div>
-
-					{/* <!-- Blog Item --> */}
-					<div className="col-lg-4 col-sm-6">
-						<div className="blog-item">
-							<div className="thumbnail">
-								<a href="blog-posts/15.html">
-									<Image alt="" src={BLOG_THUMBNAILS[15]} />
-								</a>
-							</div>
-							<h4>
-								<a href="blog-posts/15.html">
-									Talk to Smart People and Figure Shit Out
-								</a>
-							</h4>
-							<ul>
-								<li>20 Oct 2019</li>
-								<li>Philosophy</li>
-								<li>3 min read</li>
-							</ul>
-						</div>
-					</div>
-
-					{/* <!-- Blog Item --> */}
-					<div className="col-lg-4 col-sm-6">
-						<div className="blog-item">
-							<div className="thumbnail">
-								<a href="blog-posts/14.html">
-									<Image alt="" src={BLOG_THUMBNAILS[14]} />
-								</a>
-							</div>
-							<h4>
-								<a href="blog-posts/14.html">
-									IoT Has Disrupted the way we Feed our Planet
-								</a>
-							</h4>
-							<ul>
-								<li>16 Oct 2019</li>
-								<li>IoT</li>
-								<li>5 min read</li>
-							</ul>
-						</div>
-					</div>
-
-					{/* <!-- Blog Item--> */}
-					<div className="col-lg-4 col-sm-6">
-						<div className="blog-item">
-							<div className="thumbnail">
-								<a href="blog-posts/7.html">
-									<Image alt="" src={BLOG_THUMBNAILS[7]} />
-								</a>
-							</div>
-							<h4>
-								<a href="blog-posts/7.html">
-									Using AI to Predict Facebook’s Stock Price
-								</a>
-							</h4>
-							<ul>
-								<li>4 March 2019</li>
-								<li>AI</li>
-								<li>5 min read</li>
-							</ul>
-						</div>
-					</div>
-
-					{/* <!-- Blog Item--> */}
-					<div className="col-lg-4 col-sm-6">
-						<div className="blog-item">
-							<div className="thumbnail">
-								<a href="blog-posts/6.html">
-									<Image alt="" src={BLOG_THUMBNAILS[6]} />
-								</a>
-							</div>
-							<h4>
-								<a href="blog-posts/6.html">
-									How a 16-year-old learned to Diagnose Malaria in a Day
-								</a>
-							</h4>
-							<ul>
-								<li>25 Feb 2019</li>
-								<li>AI</li>
-								<li>7 min read</li>
-							</ul>
-						</div>
-					</div>
-
-					{/* <!-- Blog Item--> */}
-					<div className="col-lg-4 col-sm-6">
-						<div className="blog-item">
-							<div className="thumbnail">
-								<a href="blog-posts/5.html">
-									<Image alt="" src={BLOG_THUMBNAILS[5]} />
-								</a>
-							</div>
-							<h4>
-								<a href="blog-posts/5.html">
-									The Man who Changed my Perspective of Life
-								</a>
-							</h4>
-							<ul>
-								<li>1 Feb 2019</li>
-								<li>Philosophy</li>
-								<li>6 min read</li>
-							</ul>
-						</div>
-					</div>
-
-					{/* <!-- Blog Item--> */}
-					<div className="col-lg-4 col-sm-6">
-						<div className="blog-item">
-							<div className="thumbnail">
-								<a href="blog-posts/4.html">
-									<Image alt="" src={BLOG_THUMBNAILS[4]} />
-								</a>
-							</div>
-							<h4>
-								<a href="blog-posts/4.html">
-									The Basics of Neural Networks
-								</a>
-							</h4>
-							<ul>
-								<li>16 Jan 2019</li>
-								<li>AI</li>
-								<li>5 min read</li>
-							</ul>
-						</div>
-					</div>
-
-					{/* <!-- Blog Item--> */}
-					<div className="col-lg-4 col-sm-6">
-						<div className="blog-item">
-							<div className="thumbnail">
-								<a href="blog-posts/3.html">
-									<Image alt="" src={BLOG_THUMBNAILS[3]} />
-								</a>
-							</div>
-							<h4>
-								<a href="blog-posts/3.html">
-									Brain to Speech Translation: A New Way to Communicate
-								</a>
-							</h4>
-							<ul>
-								<li>5 Dec 2018</li>
-								<li>BCIs</li>
-								<li>3 min read</li>
-							</ul>
-						</div>
-					</div>
-
-					{/* <!-- Blog Item --> */}
-					<div className="col-lg-4 col-sm-6">
-						<div className="blog-item">
-							<div className="thumbnail">
-								<a href="blog-posts/2.html">
-									<Image alt="" src={BLOG_THUMBNAILS[2]} />
-								</a>
-							</div>
-							<h4>
-								<a href="blog-posts/2.html">Brain Controlled Snake</a>
-							</h4>
-							<ul>
-								<li>22 Nov 2018</li>
-								<li>BCIs</li>
-								<li>3 min read</li>
-							</ul>
-							<p>
-								Using brain-computer interfaces to play video games with
-								just your brainwaves.
-							</p>
-						</div>
-					</div>
-
-					{/* <!-- Blog Item --> */}
-					<div className="col-lg-4 col-sm-6">
-						<div className="blog-item">
-							<div className="thumbnail">
-								<a href="blog-posts/1.html">
-									<Image alt="" src={BLOG_THUMBNAILS[1]} />
-								</a>
-							</div>
-							<h4>
-								<a href="blog-posts/1.html">
-									EEGs Put Brainwaves in the Hands of Everyone
-								</a>
-							</h4>
-							<ul>
-								<li>12 Nov 2018</li>
-								<li>BCIs</li>
-								<li>6 min read</li>
-							</ul>
-						</div>
-					</div>
+					<BlogItem
+						title="EEGs Put Brainwaves in the Hands of Everyone"
+						link={BLOG_LINKS[0]}
+						thumbnail={BLOG_THUMBNAILS[0]}
+						date="12 Nov 2018"
+						tag="BCIs"
+						readLen={6}
+					/>
 				</div>
 			</section>
 		</div>

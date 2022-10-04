@@ -57,33 +57,6 @@ export default function Document() {
 			</Head>
 			<body>
 				{/* <!-- All Script --> */}
-				<Script src="/js/jquery.min.js" />
-				<Script src="/js/isotope.pkgd.min.js" />
-				<Script src="/js/bootstrap.min.js" />
-				<Script src="/js/simplebar.js" />
-				<Script src="/js/owl.carousel.min.js" />
-				<Script src="/js/jquery.magnific-popup.min.js" />
-				<Script src="/js/jquery.animatedheadline.min.js" />
-				<Script src="/js/jquery.easypiechart.js" />
-				<Script src="/js/jquery.validation.js" />
-				<Script src="/js/tilt.js" />
-				<Script src="/js/main.js" />
-				<Script src="https://maps.google.com/maps/api/js?sensor=false" />
-
-				{/* <!-- Page Script --> */}
-				<Script
-					src="/js/particles.min.js"
-					onLoad={() =>
-						console.log(
-							`script loaded correctly, window.FB has been populated`
-						)
-					}
-				/>
-				<Script id="particles-js">
-					{`particlesJS.load('particles-js', 'js/particles.json', function() {
-				console.log('callback - particles.js config loaded');
-        	});	`}
-				</Script>
 
 				<Main />
 				<NextScript />
